@@ -1,0 +1,26 @@
+public class Solution 
+{
+    public int findMinArrowShots(int[][] points) 
+    {
+        if(points.length==0)
+            return 0;
+        Arrays.sort(points,(x,y)->(x[0]-y[0]));
+        int ans=1;
+        int terminal=points[0][1];
+        int [] point =null;
+        for(int i=1;i<points.length;i++)
+        {
+            point=points[i];
+            if(point[0]>terminal)
+            {
+                terminal=point[1];
+                ans++;
+            }
+            else if(point[1]<terminal)
+            {
+                terminal=point[1];
+            }
+        }
+        return ans;
+    }
+}
