@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+H:/guihun/Clion/Test3/main.cpp
+iostream
+H:/guihun/Clion/Test3/iostream
+vector
+H:/guihun/Clion/Test3/vector
+iostream
+H:/guihun/Clion/Test3/iostream
+vector
+H:/guihun/Clion/Test3/vector
+
