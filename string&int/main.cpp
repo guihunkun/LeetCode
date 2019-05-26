@@ -5,8 +5,8 @@ int main()
 {
 	cout<<"*************** string 转 int ***************"<<endl;  //  to_string()
 	string pi = "pi is " + to_string(3.1415926);
-    string perfect = to_string(1+2+4+7+14) + " is a perfect number";
-    cout << pi << endl;
+    	string perfect = to_string(1+2+4+7+14) + " is a perfect number";
+    	cout << pi << endl;
   	cout << perfect << endl;
 
 	cout<<"*************** int 转 string ***************"<<endl;  //采用标准库中atoi函数,对于其他类型也都有相应的标准库函数，比如浮点型atof(),long型atol()等等
