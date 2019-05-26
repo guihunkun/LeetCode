@@ -3,20 +3,20 @@
 using namespace std;
 int main()
 {
-	cout<<"*************** string ×ª int ***************"<<endl;  //  to_string()
+	cout<<"*************** string è½¬ int ***************"<<endl;  //  to_string()
 	string pi = "pi is " + to_string(3.1415926);
-    string perfect = to_string(1+2+4+7+14) + " is a perfect number";
-    cout << pi << endl;
+    	string perfect = to_string(1+2+4+7+14) + " is a perfect number";
+    	cout << pi << endl;
   	cout << perfect << endl;
 
-	cout<<"*************** int ×ª string ***************"<<endl;  //²ÉÓÃ±ê×¼¿âÖĞatoiº¯Êı,¶ÔÓÚÆäËûÀàĞÍÒ²¶¼ÓĞÏàÓ¦µÄ±ê×¼¿âº¯Êı£¬±ÈÈç¸¡µãĞÍatof(),longĞÍatol()µÈµÈ
+	cout<<"*************** int è½¬ string ***************"<<endl;  //é‡‡ç”¨æ ‡å‡†åº“ä¸­atoiå‡½æ•°,å¯¹äºå…¶ä»–ç±»å‹ä¹Ÿéƒ½æœ‰ç›¸åº”çš„æ ‡å‡†åº“å‡½æ•°ï¼Œæ¯”å¦‚æµ®ç‚¹å‹atof(),longå‹atol()ç­‰ç­‰
 	string str = "123";
 	int n = atoi(str.c_str());
 	cout<<n<<endl;
 	return 0;
 }
 /*
- to_string()º¯ÊıµÄÊµÏÖ:
+ to_string()å‡½æ•°çš„å®ç°:
 
 #include<iostream>
 #include<string>
@@ -28,7 +28,7 @@ string to_String(int n)
     char s[max];
     char ss[max];
     int i=0,j=0;
-    if (n < 0)// ´¦Àí¸ºÊı
+    if (n < 0)// å¤„ç†è´Ÿæ•°
     {
         m = 0 - m;
         j = 1;
@@ -51,7 +51,7 @@ string to_String(int n)
 
 int main()
 {
-    cout << "ÇëÊäÈëÕûÊı:";
+    cout << "è¯·è¾“å…¥æ•´æ•°:";
     int m;
     cin >> m;
     string s = to_String(m) + "abc";
@@ -63,18 +63,18 @@ int main()
  */
 
 /*
- atoi()º¯ÊıµÄÔ´ÂëÊµÏÖ:
+ atoi()å‡½æ•°çš„æºç å®ç°:
 
-ÌØÊâÇé¿ö£º
-1--Ö¸ÕëÎªNULL
-2--¿Õ×Ö·û´¦Àí
-3--ÕıºÅÓë¸ººÅµÄ´¦Àí
-4--Òç³ö´¦Àí
-5--Èç¹ûÓöµ½Òì³£×Ö·ûÔõÃ´´¦Àí
+ç‰¹æ®Šæƒ…å†µï¼š
+1--æŒ‡é’ˆä¸ºNULL
+2--ç©ºå­—ç¬¦å¤„ç†
+3--æ­£å·ä¸è´Ÿå·çš„å¤„ç†
+4--æº¢å‡ºå¤„ç†
+5--å¦‚æœé‡åˆ°å¼‚å¸¸å­—ç¬¦æ€ä¹ˆå¤„ç†
 
 
 #include<iostream>
-enum ret { kvalid=0,kinvalid };    // ÊÇ·ñÓĞ·Ç·¨ÊäÈëµÄ±ê¼Ç
+enum ret { kvalid=0,kinvalid };    // æ˜¯å¦æœ‰éæ³•è¾“å…¥çš„æ ‡è®°
 int status = kvalid;
 long long Strtointcode(const char* digit, bool minus)
 {
@@ -127,7 +127,7 @@ int main()
 {
     char arr[20];
     int ret = 0;
-    printf("ÇëÊäÈëÄúÒª×ª»¯µÄ×Ö·û´®£º\n");
+    printf("è¯·è¾“å…¥æ‚¨è¦è½¬åŒ–çš„å­—ç¬¦ä¸²ï¼š\n");
     scanf("%s", arr);
     ret = Strtoint(arr);
     if (kvalid == status)
@@ -136,7 +136,7 @@ int main()
     }
     else
     {
-        printf("ÊäÈë·Ç·¨\n");
+        printf("è¾“å…¥éæ³•\n");
         printf("%d\n", ret);
     }
     system("pause");
