@@ -1,6 +1,43 @@
 class Solution 
 {
 public:
+    vector<vector<int> > dir = {{0,1}, {0,-1}, {-1, 0}, {1,0}};
+    int dfs(vector<vector<int> >& matrix, vector<vector<int> >& memo, int x, int y)
+    {
+        if(memo[x][y] > 0)
+            return memo[x][y];
+        int r = matrix.size(), c = matrix[0].size();
+        int len = 0;
+        for(int i = 0; i < 4; i++)
+        {
+            int dx = x + dir[i][0];
+            int dy = y + dir[i][1];
+            if((dx < 0) || (dx >= r) || (dy < 0) || (dy >= c) || (matrix[dx][dy] <= matrix[x][y]))
+                continue; 
+            len = max(len, dfs(matrix, memo, dx, dy));
+        }
+        memo[x][y] = len + 1;
+        return len + 1;
+    }
+    int longestIncreasingPath(vector<vector<int>>& matrix) 
+    {
+        if(matrix.size() == 0 || matrix[0].size() == 0)
+            return 0;
+        int r = matrix.size(), c = matrix[0].size();
+        vector<vector<int> > memo(r, vector<int>(c, 0));
+        int res = 0;
+        for(int i = 0; i < r; i++)
+            for(int j =0; j < c; j++)
+            {
+                res = max(res, dfs(matrix, memo, i, j));
+            }
+        return res;
+    }
+};
+/*
+class Solution 
+{
+public:
     vector<vector<int>> dir = {{0,1},{0,-1},{1,0},{-1,0}};
     int dfs(vector<vector<int>>& matrix,vector<vector<int>>& length,int x,int y,int n,int m) 
     {
@@ -37,6 +74,7 @@ public:
         return max_length;
     }
 };
+*/
 /*
 class Solution 
 {
