@@ -1,3 +1,4 @@
+/*
 class Solution {
 public:
     string reverseWords(string s) {
@@ -32,5 +33,49 @@ public:
             }
         }
         return words;
+    }
+};
+*/
+    
+    
+class Solution 
+{
+public:
+    string reverseWords(string s) 
+    {
+        stack<string> record;
+        string word;
+        int l, r;
+        for(l = 0; l < s.size(); l++)
+        {
+            if(s[l] != ' ')
+                break;
+        }
+        for(r = s.size() - 1; r >=0; r--)
+            if(s[r] != ' ')
+                break;
+        for(; l <= r; l++)
+        {
+            if(s[l] == ' ' && s[l + 1] != ' ')
+            {
+                record.push(word);
+                word = "";
+            }
+                
+            else if(s[l] != ' ')
+            {
+                word += s[l];
+            }
+        }
+        record.push(word);
+        string res;
+        while(!record.empty())
+        {
+            res += record.top();
+            res += ' ';
+            record.pop();
+        }
+        res.pop_back();
+        return res;
     }
 };
