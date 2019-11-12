@@ -273,8 +273,8 @@ public:
                 break;
         }
         //i-instart是inorder中根结点到左边起始点的距离
-        node->left = helper(inorder, postorder, instart, i - 1, postart, postart + i - instart - 1);
-        node->right = helper(inorder, postorder, i + 1, inend , postart + i - instart, poend - 1);
+        node->left = helperInPos(inorder, postorder, instart, i - 1, postart, postart + i - instart - 1);
+        node->right = helperInPos(inorder, postorder, i + 1, inend , postart + i - instart, poend - 1);
         return node;
     }
 
