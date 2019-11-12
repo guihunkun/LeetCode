@@ -17,7 +17,7 @@ class Solution
 {
 public:
 	
-	// ¶ş²æÊ÷µÄ×î´óÉî¶È LeetCode 104 
+	// äºŒå‰æ ‘çš„æœ€å¤§æ·±åº¦ LeetCode 104 
 	int maxDepth(TreeNode* root) 
     {
         if(root==NULL)
@@ -28,7 +28,7 @@ public:
     }
     
     
-	// Ç°Ğò±éÀú µİ¹é 
+	// å‰åºéå† é€’å½’ 
 	vector<int> preorder(TreeNode* root) 
 	{
         vector<int> res;
@@ -45,7 +45,7 @@ public:
         preorder(root->right,res);
 	} 
     
-    // Ç°Ğò±éÀú ·Çµİ¹é 
+    // å‰åºéå† éé€’å½’ 
     vector<int> preorder_(TreeNode* root) 
 	{
         vector<int> res;
@@ -69,7 +69,7 @@ public:
     
     
     
-    // ÖĞĞò±éÀú µİ¹é 
+    // ä¸­åºéå† é€’å½’ 
     vector<int> inorder(TreeNode* root) 
     {
     	vector<int> res;
@@ -86,7 +86,7 @@ public:
         inorder(root->right, res);
     }
 
-    // ÖĞĞò±éÀú ·Çµİ¹é 
+    // ä¸­åºéå† éé€’å½’ 
     vector<int> inorder_(TreeNode* root) 
 	{
         vector<int> res;
@@ -113,7 +113,7 @@ public:
     }
     
     
-    // ºóĞò±éÀú µİ¹é 
+    // ååºéå† é€’å½’ 
     vector<int> postorder(TreeNode* root) 
     {
     	vector<int> res;
@@ -130,7 +130,7 @@ public:
         res.push_back(root->val);
     }
     
-    // ºóĞò±éÀú ·Çµİ¹é  ÊµÏÖ1£º 
+    // ååºéå† éé€’å½’  å®ç°1ï¼š 
     
 	/*
 	vector<int> postorder_(TreeNode* root) 
@@ -160,7 +160,7 @@ public:
 		return res;
     }
     */
-    // ºóĞò±éÀú ·Çµİ¹é  ÊµÏÖ2£º 
+    // ååºéå† éé€’å½’  å®ç°2ï¼š 
     vector<int> postorder_(TreeNode* root) 
 	{
 		vector<int> res;     
@@ -173,20 +173,20 @@ public:
 			TreeNode* node = sta.top();
 			sta.pop();
             res.push_back(node->val);
-            // ÊµÏÖÄæĞò
+            // å®ç°é€†åº
             if(node->left)
 				sta.push(node->left);
             if(node->right)
 				sta.push(node->right);
 			
         }
-        // ½«½á¹û½øĞĞÄæĞò
+        // å°†ç»“æœè¿›è¡Œé€†åº
         reverse(res.begin(), res.end());
 		return res;
     }
     
     
-    // ²ãĞò±éÀú ÊµÏÖ1£º
+    // å±‚åºéå† å®ç°1ï¼š
 	/* 
     vector<vector<int> > levelOrder(TreeNode* root) 
     {
@@ -211,7 +211,7 @@ public:
         return res;
     }
     */
-    // ²ãĞò±éÀú ÊµÏÖ2£º
+    // å±‚åºéå† å®ç°2ï¼š
 	vector<vector<int> > levelOrder(TreeNode* root) 
     {
         vector<vector<int> > res;
@@ -241,7 +241,7 @@ public:
     }
 
 
-    // ²ãĞò´òÓ¡
+    // å±‚åºæ‰“å°
 	void printlevelorderTreeNode(vector<vector<int> > &ress)
     {
     	for(int i = 0; i < ress.size(); i++)
@@ -253,7 +253,7 @@ public:
 	}
 	
 	
-    // Ç°ÖĞºóĞò´òÓ¡ 
+    // å‰ä¸­ååºæ‰“å° 
     void printorderTreeNode(vector<int> &res)
     {
     	for(int i = 0; i < res.size(); i++)
@@ -266,13 +266,13 @@ public:
             return NULL;
         TreeNode *node = new TreeNode(postorder[poend]);
         int i = 0;
-        //¿¿¿¿¿¿¿¿¿¿¿¿
+        //éå†ä¸­åºï¼Œæ‰¾åˆ°æ ‘çš„æ ¹ç»“ç‚¹
         for(i = instart; i< inorder.size(); i++)
         {
             if(inorder[i] == node->val)
                 break;
         }
-        //i-instart¿inorder¿¿¿¿¿¿¿¿¿¿¿¿¿
+        //i-instartæ˜¯inorderä¸­æ ¹ç»“ç‚¹åˆ°å·¦è¾¹èµ·å§‹ç‚¹çš„è·ç¦»
         node->left = helper(inorder, postorder, instart, i - 1, postart, postart + i - instart - 1);
         node->right = helper(inorder, postorder, i + 1, inend , postart + i - instart, poend - 1);
         return node;
@@ -300,14 +300,14 @@ public:
 		return node;
 	}
 	
-	// ¿¿¿¿¿¿¿¿¿¿¿¿
+	// ä¸­åºååºéå†é‡å»ºäºŒå‰æ ‘
 	TreeNode* buildTreeInPos(vector<int>& inorder, vector<int>& postorder) 
 	{
         return helperInPos(inorder, postorder, 0, inorder.size() - 1, 0, postorder.size() - 1);    
     }
 
 
-	// ¿¿¿¿¿¿¿¿¿¿¿¿
+	// å‰åºä¸­åºéå†é‡äºŒå‰æ ‘
     TreeNode* buildTreePreIn(vector<int>& preorder, vector<int>& inorder) 
     {
         return helperPreIn(preorder, inorder, 0, preorder.size() - 1, 0, inorder.size() - 1);
@@ -321,7 +321,7 @@ public:
 };
 int main()
 {
-	//****°¸Àı1**** 
+	//****æ¡ˆä¾‹1**** 
 	    /////////////////
         //      5      //
         //    /   \    //
@@ -341,23 +341,23 @@ int main()
     
     vector<int> res;
     
-    // µİ¹éÇ°ÖĞºóĞò±éÀú
-	cout<<"****µİ¹éÇ°ÖĞºóĞò±éÀú****"<<endl;
+    // é€’å½’å‰ä¸­ååºéå†
+	cout<<"****é€’å½’å‰ä¸­ååºéå†****"<<endl;
 	
-    // Ç°Ğò±éÀú
-    cout<<"****Ç°Ğò±éÀú µİ¹é****"<<endl;
+    // å‰åºéå†
+    cout<<"****å‰åºéå† é€’å½’****"<<endl;
 	res = Solution().preorder(root);
 	Solution().printorderTreeNode(res);
 	cout<<endl<<endl;
 		
-	// ÖĞĞò±éÀú
-	cout<<"****ÖĞĞò±éÀú µİ¹é****"<<endl; 
+	// ä¸­åºéå†
+	cout<<"****ä¸­åºéå† é€’å½’****"<<endl; 
 	res = Solution().inorder(root);
 	Solution().printorderTreeNode(res);
 	cout<<endl<<endl;
 	
-	// ºóĞò±éÀú
-	cout<<"****ºóĞò±éÀú µİ¹é****"<<endl; 
+	// ååºéå†
+	cout<<"****ååºéå† é€’å½’****"<<endl; 
 	res = Solution().postorder(root);
 	Solution().printorderTreeNode(res);
 	cout<<endl<<endl;
@@ -366,30 +366,30 @@ int main()
 	cout<<endl<<endl;
 	
 	
-	// ·Çµİ¹éÇ°ÖĞºóĞò±éÀú
-	cout<<"****·Çµİ¹éÇ°ÖĞºóĞò±éÀú****"<<endl;
+	// éé€’å½’å‰ä¸­ååºéå†
+	cout<<"****éé€’å½’å‰ä¸­ååºéå†****"<<endl;
 	
-    // Ç°Ğò±éÀú ·Çµİ¹é 
-    cout<<"****Ç°Ğò±éÀú ·Çµİ¹é****"<<endl;
+    // å‰åºéå† éé€’å½’ 
+    cout<<"****å‰åºéå† éé€’å½’****"<<endl;
 	res = Solution().preorder_(root); 
 	Solution().printorderTreeNode(res);
 	cout<<endl<<endl;
 	
-	// ÖĞĞò±éÀú ·Çµİ¹é 
-	cout<<"****ÖĞĞò±éÀú ·Çµİ¹é****"<<endl; 
+	// ä¸­åºéå† éé€’å½’ 
+	cout<<"****ä¸­åºéå† éé€’å½’****"<<endl; 
 	res = Solution().inorder_(root);
 	Solution().printorderTreeNode(res);
 	cout<<endl<<endl;
 	
-	// ºóĞò±éÀú ·Çµİ¹é 
-	cout<<"****ºóĞò±éÀú ·Çµİ¹é****"<<endl; 
+	// ååºéå† éé€’å½’ 
+	cout<<"****ååºéå† éé€’å½’****"<<endl; 
 	res = Solution().postorder_(root);
 	Solution().printorderTreeNode(res);
 	cout<<endl<<endl;
 	
 	
-	// ²ãĞò±éÀú
-	cout<<"****²ãĞò±éÀú****"<<endl; 
+	// å±‚åºéå†
+	cout<<"****å±‚åºéå†****"<<endl; 
 	vector<vector<int> > ress;
 	ress = Solution().levelOrder(root);
 	Solution().printlevelorderTreeNode(ress);
