@@ -259,6 +259,63 @@ public:
     	for(int i = 0; i < res.size(); i++)
     		cout<<res[i]<<" ";
 	}
+
+	TreeNode* helperInPos(vector<int>& inorder, vector<int>& postorder, int instart, int inend, int postart, int poend)
+    {
+        if(instart > inend || postart > poend)
+            return NULL;
+        TreeNode *node = new TreeNode(postorder[poend]);
+        int i = 0;
+        //¿¿¿¿¿¿¿¿¿¿¿¿
+        for(i = instart; i< inorder.size(); i++)
+        {
+            if(inorder[i] == node->val)
+                break;
+        }
+        //i-instart¿inorder¿¿¿¿¿¿¿¿¿¿¿¿¿
+        node->left = helper(inorder, postorder, instart, i - 1, postart, postart + i - instart - 1);
+        node->right = helper(inorder, postorder, i + 1, inend , postart + i - instart, poend - 1);
+        return node;
+    }
+
+	TreeNode* helperPreIn(vector<int>& preorder, vector<int>& inorder, int prestart, int preend, int instart, int inend)
+	{
+		if(prestart > preend || instart > inend)
+		{
+			return NULL;
+		}
+
+		TreeNode* node =new TreeNode(preorder[prestart]);
+		int i;
+		for(i = instart; i <= inend; i++)
+		{
+			if(inorder[i] == node->val)
+			{
+				break;
+			}
+		}
+
+		node->left=helperPreIn(preorder, inorder, prestart + 1, prestart + i - instart, instart, i - 1);
+		node->right=helperPreIn(preorder , inorder, prestart + i - instart + 1, preend, i + 1, inend);
+		return node;
+	}
+	
+	// ¿¿¿¿¿¿¿¿¿¿¿¿
+	TreeNode* buildTreeInPos(vector<int>& inorder, vector<int>& postorder) 
+	{
+        return helperInPos(inorder, postorder, 0, inorder.size() - 1, 0, postorder.size() - 1);    
+    }
+
+
+	// ¿¿¿¿¿¿¿¿¿¿¿¿
+    TreeNode* buildTreePreIn(vector<int>& preorder, vector<int>& inorder) 
+    {
+        return helperPreIn(preorder, inorder, 0, preorder.size() - 1, 0, inorder.size() - 1);
+    }
+
+
+
+
 		
 	 
 };
