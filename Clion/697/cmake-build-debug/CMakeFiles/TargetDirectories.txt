@@ -1,3 +1,0 @@
-H:/guihun/Clion/697/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-H:/guihun/Clion/697/cmake-build-debug/CMakeFiles/697.dir
-H:/guihun/Clion/697/cmake-build-debug/CMakeFiles/edit_cache.dir

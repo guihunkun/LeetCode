@@ -1,3 +1,0 @@
-H:/guihun/Clion/Test3/cmake-build-debug/CMakeFiles/Test3.dir
-H:/guihun/Clion/Test3/cmake-build-debug/CMakeFiles/edit_cache.dir
-H:/guihun/Clion/Test3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
