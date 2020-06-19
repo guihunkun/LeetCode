@@ -28,6 +28,51 @@ using namespace std;
         }
         return true;      
     }
+#if 0
+class Solution 
+{
+public:
+    bool isEffective(char c)
+    {
+        if((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z'))
+        {
+            return true;
+        }
+        return false;
+    }
+    bool isPalindrome(string s) 
+    {
+        if(s.empty())
+        {
+            return true;
+        }
+        int left = 0, right = s.size()-1;
+        while(left < right)
+        {
+            while(left < right && !isEffective(s[left]))
+            {
+                left++;
+            }
+            while(left < right && !isEffective(s[right]))
+            {
+                right--;
+            }
+            if(left < right)
+            {
+                if(tolower(s[left]) != tolower(s[right]))
+                {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+        }
+        return true;
+    }
+};
+#endif
+
+
 int main()
 {
 	string s1="aabb aa";//"A man, a plan, a canal: Panama";
