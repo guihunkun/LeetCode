@@ -1,3 +1,4 @@
+/*
 #define LL long long
 class Solution 
 {
@@ -45,3 +46,47 @@ public:
         return ans;
     }
 };
+*/
+
+class Solution 
+{
+public:
+    bool check(const vector<int>& nums, int maxsum, int m)
+    {
+        int sum = 0;
+        int cnt = 1;
+        for(int i = 0; i < nums.size(); i++)
+        {
+            if(sum + nums[i] > maxsum) { 
+                cnt++;
+                sum = nums[i];
+            } else {
+                sum += nums[i];
+            }
+        }
+        return cnt <= m;
+    }
+
+    int splitArray(vector<int>& nums, int m) 
+    {
+        int left = 0, right = 0, mid = 0;
+        for(int i = 0; i < nums.size(); i++)
+        {
+            right += nums[i];
+            if(left < nums[i]) {
+                left = nums[i];
+            }
+        }
+        while(left < right)
+        {
+            mid = left + (right - left)/2;
+            if(check(nums, mid, m)) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
+};
+
