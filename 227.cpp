@@ -1,9 +1,10 @@
-class Solution {
+class Solution 
+{
 public:
-    int calculate(string s) {
+    int calculate(string s) 
+    {
         // Stack to store numbers
         stack<int> nums;
-        
         // Stack to store operators
         stack<char> ops;
         
