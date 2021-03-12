@@ -16,8 +16,7 @@ public:
         int pos = -1;
         for(int i = 0; i < n; i++)
         {
-            if(preorder[i] == ',')
-            {
+            if(preorder[i] == ',') {
                 record.push_back(preorder.substr(pos + 1, i - pos - 1));
                 pos = i;
             }
