@@ -7,14 +7,11 @@ public:
         int recLen = 0;
         for (auto c: s)
         {
-            if (c=='c' && recLen >= 2 && rec[recLen - 2]=='a' && rec[recLen - 1]=='b')
-            {
+            if (c=='c' && recLen >= 2 && rec[recLen - 2]=='a' && rec[recLen - 1]=='b') {
                 rec.pop_back();
                 rec.pop_back();
                 recLen -= 2;
-            }
-            else
-            {
+            } else {
                 rec.push_back(c);
                 recLen += 1;
             }
