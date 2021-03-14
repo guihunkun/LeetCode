@@ -18,7 +18,7 @@ public:
         queue<TreeNode*> q;     
         q.push(root);
         int level = 0;
-        while(!q.empty()) 
+        while( !q.empty() ) 
         {  
             vector<int> tmp;
             int count = q.size();
