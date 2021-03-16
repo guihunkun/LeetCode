@@ -7,10 +7,12 @@ public:
         int res2 = 1;
         int res3 = 1;
         int res = 0;
-        if(n == 0)
+        if(n == 0) {
             return res1;
-        if(n <= 2)
+        }
+        if(n <= 2) {
             return res2;
+        }
         while(n > 2)
         {
             res = res1 + res2 + res3;
