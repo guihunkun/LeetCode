@@ -11,8 +11,7 @@ public:
         int N = 1001;
         vector<int> rec(N, 0);
         int cur = 0;
-        for(int i = 0; i < trips.size(); i++)
-        {
+        for(int i = 0; i < trips.size(); i++) {
             rec[trips[i][1]] += trips[i][0];
             rec[trips[i][2]] -= trips[i][0];
         }
