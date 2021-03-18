@@ -1,5 +1,6 @@
 //leetcode
-class Solution {
+class Solution 
+{
 public:
     int binarySearch(const vector<int>& accDiff, int endIndex, int target) {
         int low = 0, high = endIndex;
