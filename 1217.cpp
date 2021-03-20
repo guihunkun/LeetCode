@@ -6,12 +6,9 @@ public:
         int even = 0, odd = 0;
         for(int chip : chips)
         {
-            if((chip&1) == 0)
-            {
+            if((chip&1) == 0) {
                 even++;
-            }
-            else
-            {
+            } else {
                 odd++;
             }
         }
