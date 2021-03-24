@@ -33,6 +33,7 @@ public:
                 root->right=root->left;
                 root->left=NULL;
             } 
+            
         }   
     }
 };
