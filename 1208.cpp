@@ -2,7 +2,8 @@
 class Solution 
 {
 public:
-    int binarySearch(const vector<int>& accDiff, int endIndex, int target) {
+    int binarySearch(const vector<int>& accDiff, int endIndex, int target) 
+    {
         int low = 0, high = endIndex;
         while(low < high) {
             int mid = (high - low) / 2 + low;
@@ -15,7 +16,8 @@ public:
         return low;
     }
 
-    int equalSubstring(string s, string t, int maxCost) {
+    int equalSubstring(string s, string t, int maxCost) 
+    {
         int n = s.length();
         vector<int> accDiff(n + 1, 0);
         for(int i = 0; i < n; i++) {
