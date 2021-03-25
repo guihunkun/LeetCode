@@ -22,12 +22,13 @@ public:
             if(inorder[i] == node->val)
                 break;
         }
+        
         //i-instart是inorder中根结点到左边起始点的距离
         node->left = helper(inorder, postorder, instart, i - 1, postart, postart + i - instart - 1);
         node->right = helper(inorder, postorder, i + 1, inend , postart + i - instart, poend - 1);
         return node;
-        
     }
+    
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) 
     {
         if(inorder.size() == 0)
