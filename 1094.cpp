@@ -15,8 +15,7 @@ public:
             rec[trips[i][1]] += trips[i][0];
             rec[trips[i][2]] -= trips[i][0];
         }
-        for(int i = 0; i < N; i++)
-        {
+        for(int i = 0; i < N; i++) {
             cur += rec[i];
             if(cur > capacity)
                 return false;
