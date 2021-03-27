@@ -1,7 +1,9 @@
-class Solution {
+class Solution 
+{
     int len;
 public:
-    vector<string> braceExpansionII(string expression) {
+    vector<string> braceExpansionII(string expression) 
+    {
         int start = 0;
         len = expression.size();
         auto k = dfs(expression,start);
@@ -10,7 +12,8 @@ public:
         sort(res.begin(),res.end());
         return res;
     }
-    unordered_set<string> dfs(string& expression,int& start){
+    unordered_set<string> dfs(string& expression,int& start)
+    {
         unordered_set<string> res,t;
         while(start < len && expression[start] != '}'){
             if(expression[start] == '{'){
