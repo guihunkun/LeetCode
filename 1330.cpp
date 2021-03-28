@@ -1,11 +1,11 @@
-class Solution {
+class Solution 
+{
 public:
     int get_max(vector<int> &v)
     {
         int res = INT_MIN;
         for(auto x : v)
-            res = max(res,x);
-        
+            res = max(res,x);   
         return res;
     }
     int get_min(vector<int> &v)
