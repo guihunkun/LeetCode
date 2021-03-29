@@ -19,8 +19,7 @@ public:
             ListNode* next = cur->next;
             while(next != NULL)
             {
-                if(next->val > cur->val)
-                {
+                if(next->val > cur->val) {
                     res.push_back(next->val);
                     break;
                 }
@@ -55,8 +54,7 @@ public:
         {
             int node = nodes.top();
             nodes.pop();
-            while(!stk.empty() && node >= stk.top()) 
-            {
+            while(!stk.empty() && node >= stk.top()) {
                 stk.pop();
             }
             result[--length] = stk.empty() ? 0 : stk.top();
