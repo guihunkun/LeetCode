@@ -10,12 +10,9 @@ public:
         int j =0;
         for(int i =0; i < record.size() && j < heights.size(); i++)
         {
-            if(record[i] != 0)
-            {
-                while(record[i] != 0)
-                {
-                    if(heights[j++]!=i)
-                    {
+            if(record[i] != 0) {
+                while(record[i] != 0) {
+                    if(heights[j++]!=i) {
                         res++;
                     }
                     record[i]--;
