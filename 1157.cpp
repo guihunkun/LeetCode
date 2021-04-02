@@ -1,8 +1,10 @@
-class MajorityChecker {
+class MajorityChecker 
+{
     int n,N,s,a[20005],b[205][20005],d[205];
     map<int,int> m;
 public:
-    MajorityChecker(vector<int>& arr) {
+    MajorityChecker(vector<int>& arr) 
+    {
         n=arr.size();
         N=0;
         for(int i=0;i<n;i++)m[a[i]=arr[i]]++;
@@ -15,7 +17,8 @@ public:
         }
     }
     
-    int query(int left, int right, int threshold) {
+    int query(int left, int right, int threshold) 
+    {
         int i,j,k;
         if(right-left<=s)
         {
