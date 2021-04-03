@@ -1,10 +1,12 @@
 //leetcode
 class Solution {
 public:
-    vector<int> findNumOfValidWords(vector<string>& words, vector<string>& puzzles) {
+    vector<int> findNumOfValidWords(vector<string>& words, vector<string>& puzzles) 
+    {
         unordered_map<int, int> frequency;
 
-        for (const string& word: words) {
+        for (const string& word: words) 
+        {
             int mask = 0;
             for (char ch: word) {
                 mask |= (1 << (ch - 'a'));
@@ -15,10 +17,11 @@ public:
         }
 
         vector<int> ans;
-        for (const string& puzzle: puzzles) {
+        for (const string& puzzle: puzzles) 
+        {
             int total = 0;
 
-            // √∂æŸ◊”ºØ∑Ω∑®“ª
+            // Êûö‰∏æÂ≠êÈõÜÊñπÊ≥ï‰∏Ä
             // for (int choose = 0; choose < (1 << 6); ++choose) {
             //     int mask = 0;
             //     for (int i = 0; i < 6; ++i) {
@@ -32,7 +35,7 @@ public:
             //     }
             // }
 
-            // √∂æŸ◊”ºØ∑Ω∑®∂˛
+            // Êûö‰∏æÂ≠êÈõÜÊñπÊ≥ï‰∫å
             int mask = 0;
             for (int i = 1; i < 7; ++i) {
                 mask |= (1 << (puzzle[i] - 'a'));
