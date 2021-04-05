@@ -11,15 +11,13 @@ public:
             for(int i = 0; i < s.size() - len + 1; i ++)
             {
                 string son = s.substr(i, len);
-                if(getLetters(son) <= maxLetters)
-                {
+                if(getLetters(son) <= maxLetters) {
                     hash[son] ++;
                 }
             }
         }
         auto it = hash.begin();
-        while(it != hash.end())
-        {
+        while(it != hash.end()) {
             res = max(res, it->second);
             it ++;
         }
