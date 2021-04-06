@@ -1,4 +1,5 @@
-class UnionFind {
+class UnionFind 
+{
 private:
     vector<int> f, sz;
 public:
@@ -32,7 +33,8 @@ public:
     }
 };
 
-class Solution {
+class Solution 
+{
 public:
     vector<int> hitBricks(vector<vector<int>>& grid, vector<vector<int>>& hits) {
         int h = grid.size(), w = grid[0].size();
