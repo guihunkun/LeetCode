@@ -15,8 +15,7 @@ public:
         {
             if(record.size() == 1)
                 return record.top();
-            else
-            {
+            else {
                 int max1 = record.top();
                 record.pop();
                 int max2 = record.top();
