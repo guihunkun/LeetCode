@@ -18,8 +18,7 @@
 class Solution 
 {
 public:
-    TreeNode* sortedListToBST(ListNode* head) 
-    {
+    TreeNode* sortedListToBST(ListNode* head) {
         return buildTree(head, nullptr);
     }
     TreeNode * buildTree(ListNode* head, ListNode * tail)
@@ -27,8 +26,7 @@ public:
         if(head == tail) 
             return nullptr;
         ListNode* slow = head, *fast = head;
-        while(fast != tail && fast->next != tail)
-        {
+        while(fast != tail && fast->next != tail) {
             slow = slow->next;
             fast = fast->next->next;
         }
