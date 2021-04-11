@@ -15,10 +15,8 @@ public:
         // 状态转移
         // s[i-1] == t[j-1]时，dp[i][j] = dp[i-1][j-1] + dp[i-1][j]  dp[i-1][j-1]表示保留s[i-1]的情况，dp[i-1][j]表示移除s[i-1]的情况
         // s[i-1] != t[j-1]时，dp[i][j] = dp[i-1][j]
-        for(int i = 1; i <= n; i++) 
-        {
-            for(int j = 1; j <= m; j++) 
-            {
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= m; j++) {
                 dp[i][j] = dp[i - 1][j];
                 if(s[i - 1] == t[j - 1]) 
                     dp[i][j] += dp[i - 1][j - 1];
