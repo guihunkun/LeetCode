@@ -1,11 +1,13 @@
 //leetcode
-class DisjointSetUnion {
+class DisjointSetUnion 
+{
 private:
     vector<int> f, rank;
     int n;
 
 public:
-    DisjointSetUnion(int _n) {
+    DisjointSetUnion(int _n) 
+    {
         n = _n;
         rank.resize(n, 1);
         f.resize(n);
@@ -18,7 +20,8 @@ public:
         return f[x] == x ? x : f[x] = find(f[x]);
     }
 
-    void unionSet(int x, int y) {
+    void unionSet(int x, int y) 
+    {
         int fx = find(x), fy = find(y);
         if (fx == fy) {
             return;
@@ -31,9 +34,11 @@ public:
     }
 };
 
-class Solution {
+class Solution 
+{
 public:
-    string smallestStringWithSwaps(string s, vector<vector<int>>& pairs) {
+    string smallestStringWithSwaps(string s, vector<vector<int>>& pairs) 
+    {
         DisjointSetUnion dsu(s.length());
         for (auto& it : pairs) {
             dsu.unionSet(it[0], it[1]);
