@@ -11,10 +11,11 @@ public:
         for(int i = 1; i < N; i++) 
         {
             set<int> flower{ 1,2,3,4 };
-            for(int j = 0; j < record[i].size(); j++)
+            for(int j = 0; j < record[i].size(); j++) {
                 flower.erase(res[record[i][j]]);
+            }
             res[i] = *flower.begin();
         }
-    return res;
+        return res;
     }
 };
