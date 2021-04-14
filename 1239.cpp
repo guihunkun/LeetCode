@@ -1,8 +1,10 @@
 //leetcode
-class Solution {
+class Solution 
+{
 public:
-    int maxLength(vector<string>& arr) {
-        // ÎªÃ¿Ò»¸ö×Ö·û´®¹¹½¨Î»ÏòÁ¿
+    int maxLength(vector<string>& arr) 
+    {
+        // ä¸ºæ¯ä¸€ä¸ªå­—ç¬¦ä¸²æ„å»ºä½å‘é‡
         int sz = arr.size();
         vector<int> bits(sz, 0);
         for (int i = 0; i < sz; ++i) {
@@ -15,16 +17,17 @@ public:
     }
 
 private:
-    // ÓÃÓÚ±£´æ´ğ°¸
+    // ç”¨äºä¿å­˜ç­”æ¡ˆ
     int ans;
 
-    int buildCharBits(string s) {
-        // ÓÅ»¯¼¼ÇÉ
+    int buildCharBits(string s) 
+    {
+        // ä¼˜åŒ–æŠ€å·§
         if (s.size() > 26) return -1;
 
         int bit = 0;
         for (auto &i : s) {
-            // Èô×Ö·û´®ÖĞ³öÏÖÁËÏàÍ¬×Ö·ûÔò·µ»Ø-1±íÊ¾¸Ã×Ö·û´®²»ºÏ¸ñ
+            // è‹¥å­—ç¬¦ä¸²ä¸­å‡ºç°äº†ç›¸åŒå­—ç¬¦åˆ™è¿”å›-1è¡¨ç¤ºè¯¥å­—ç¬¦ä¸²ä¸åˆæ ¼
             int mask = 1 << (i - 'a');
             if (bit & mask) return -1;
 
@@ -33,18 +36,19 @@ private:
         return bit;
     }
 
-    // »ØËİ¹ı³Ì¡£idx±íÊ¾arrÖĞÕıÔÚ´¦ÀíµÄ×Ö·û´®µÄÏÂ±ê£¬trackºÍlen·Ö±ğ±íÊ¾´®Áªºó×Ö·û´®µÄÎ»ÏòÁ¿ºÍ³¤¶È
-    void backtrace(vector<string>& arr, vector<int>& bits, int idx, int track, int len) {
-        // ËùÓĞ×Ö·û´®´¦ÀíÍê±ÏÊ±¸üĞÂ´ğ°¸
+    // å›æº¯è¿‡ç¨‹ã€‚idxè¡¨ç¤ºarrä¸­æ­£åœ¨å¤„ç†çš„å­—ç¬¦ä¸²çš„ä¸‹æ ‡ï¼Œtrackå’Œlenåˆ†åˆ«è¡¨ç¤ºä¸²è”åå­—ç¬¦ä¸²çš„ä½å‘é‡å’Œé•¿åº¦
+    void backtrace(vector<string>& arr, vector<int>& bits, int idx, int track, int len) 
+    {
+        // æ‰€æœ‰å­—ç¬¦ä¸²å¤„ç†å®Œæ¯•æ—¶æ›´æ–°ç­”æ¡ˆ
         if (idx >= arr.size()) {
             ans = max(ans, len);
             return ;
         }
 
-        // ²»´®Áªarr[idx]
+        // ä¸ä¸²è”arr[idx]
         backtrace(arr, bits, idx + 1, track, len);
 
-        // Èç¹ûarr[idx]±¾ÉíÊÇºÏ¸ñµÄ²¢ÇÒºÍ´®ÁªºóµÄ×Ö·û´®Ã»ÓĞÖØ¸´×Ö·ûÔò´®Áªarr[i]
+        // å¦‚æœarr[idx]æœ¬èº«æ˜¯åˆæ ¼çš„å¹¶ä¸”å’Œä¸²è”åçš„å­—ç¬¦ä¸²æ²¡æœ‰é‡å¤å­—ç¬¦åˆ™ä¸²è”arr[i]
         if (bits[idx] != -1 && (track & bits[idx]) == 0) {
             backtrace(arr, bits, idx + 1, track | bits[idx], len + arr[idx].size());
         }
