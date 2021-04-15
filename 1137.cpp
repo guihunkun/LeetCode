@@ -13,8 +13,7 @@ public:
         if(n <= 2) {
             return res2;
         }
-        while(n > 2)
-        {
+        while(n > 2) {
             res = res1 + res2 + res3;
             res1 = res2;
             res2 = res3;
