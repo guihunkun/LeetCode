@@ -11,8 +11,7 @@ public:
         for(int i = 1; i < n; ++i)
         {
             prev.insert(nums[i]);
-            while(curr < i && abs(*prev.rbegin()-*prev.begin()) > limit)
-            {
+            while(curr < i && abs(*prev.rbegin()-*prev.begin()) > limit) {
                 prev.erase(nums[curr]);
                 curr++;
             }
