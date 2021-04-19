@@ -19,8 +19,9 @@ public:
         for(int i = rec.size() - 1; i >= 0; i --)
         {
             if(rec[i][0] <= row && row <= rec[i][2] &&
-               rec[i][1] <= col && col <= rec[i][3])
+               rec[i][1] <= col && col <= rec[i][3]) {
                 return rec[i][4];
+            }
         }
         return rectangle[row][col];
     }
