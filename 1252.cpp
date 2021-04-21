@@ -11,12 +11,10 @@ public:
         {
             r = indices[i][0];
             c = indices[i][1];
-            for(int j = 0; j < m; j++)
-            {
+            for(int j = 0; j < m; j++) {
                 record[r][j]++;
             }
-            for(int j = 0; j < n; j++)
-            {
+            for(int j = 0; j < n; j++) {
                 record[j][c]++;
             }
         }
