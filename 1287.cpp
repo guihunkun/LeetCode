@@ -8,13 +8,10 @@ public:
         {
             if(arr[i] == res)
             {
-                if(++count > arr.size()/4)
-                {
+                if(++count > arr.size()/4) {
                     return res;
                 }
-            }
-            else
-            {
+            } else {
                 res = arr[i];
                 count = 1;
             }
