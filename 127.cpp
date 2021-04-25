@@ -1,17 +1,20 @@
-class Solution {
+class Solution 
+{
 public:
     unordered_map<string, int> wordId;
     vector<vector<int>> edge;
     int nodeNum = 0;
 
-    void addWord(string& word) {
+    void addWord(string& word) 
+    {
         if (!wordId.count(word)) {
             wordId[word] = nodeNum++;
             edge.emplace_back();
         }
     }
 
-    void addEdge(string& word) {
+    void addEdge(string& word) 
+    {
         addWord(word);
         int id1 = wordId[word];
         for (char& it : word) {
@@ -25,7 +28,8 @@ public:
         }
     }
 
-    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+    int ladderLength(string beginWord, string endWord, vector<string>& wordList)
+    {
         for (string& word : wordList) {
             addEdge(word);
         }
