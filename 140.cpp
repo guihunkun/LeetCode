@@ -4,7 +4,7 @@ public:
 	vector<string> wordBreak(string s, vector<string>& wordDict)
 	{
 		if(!wordBreak_139(s, wordDict)) 
-            return {};
+            		return {};
 		size_t validEnd = 0;
 		vector<vector<string>> dp(s.size() + 1, vector<string>());
 		for(size_t i = 0; i < s.size(); i++)
