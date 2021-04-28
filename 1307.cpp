@@ -1,6 +1,7 @@
 using PCI = pair<char, int>;
 
-class Solution {
+class Solution 
+{
 private:
     vector<PCI> weight;
     vector<int> suffix_sum_min, suffix_sum_max;
@@ -8,7 +9,8 @@ private:
     bool used[10];
 
 public:
-    int pow10(int x) {
+    int pow10(int x) 
+    {
         int ret = 1;
         for (int i = 0; i < x; ++i) {
             ret *= 10;
@@ -16,7 +18,8 @@ public:
         return ret;
     }
 
-    bool dfs(int pos, int total) {
+    bool dfs(int pos, int total) 
+    {
         if (pos == weight.size()) {
             return total == 0;
         }
@@ -36,7 +39,8 @@ public:
         return false;
     }
 
-    bool isSolvable(vector<string>& words, string result) {
+    bool isSolvable(vector<string>& words, string result) 
+    {
         unordered_map<char, int> _weight;
         unordered_set<char> _lead_zero;
         for (const string& word: words) {
