@@ -1,9 +1,10 @@
+
 class Solution 
 {
 public:
     vector<vector<int>> shiftGrid(vector<vector<int>>& grid, int k) 
     {
-        vector<vector<int> > res(grid.size(), vector<int>(grid[0].size()));
+        vector<vector<int> > res(grid.size(), vector<int>(grid[0].size()) );
         int n,m,t;
         n = grid.size();
         m = grid[0].size();
