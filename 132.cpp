@@ -35,15 +35,13 @@ public:
         // dp[i] = min(dp[j] + 1 if s[j + 1: i] 是回文 for j in range(i))
         for(int i=0;i<len;i++)
         {
-            if(checkPalindrome[0][i])
-            {
+            if(checkPalindrome[0][i]) {
                 dp[i]=0;
                 continue;
             }
             for(int j=0;j<i;j++)
             {
-                if(checkPalindrome[j+1][i])
-                {
+                if(checkPalindrome[j+1][i]) {
                     dp[i]=min(dp[i],dp[j]+1);
                 }
             }
