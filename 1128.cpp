@@ -14,8 +14,7 @@ public:
             string key = to_string(a) + to_string(b);
             rec[key]++;
         }
-        for(auto it : rec)
-        {
+        for(auto it : rec) {
             res += (it.second-1)*it.second/2;
         }
         return res;
