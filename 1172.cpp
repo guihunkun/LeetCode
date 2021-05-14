@@ -1,13 +1,16 @@
-class DinnerPlates {
+class DinnerPlates 
+{
 public:
     int cap;
     set<int> notFullStack;
     map<int, stack<int>> stackCont;
-    DinnerPlates(int capacity) {
+    DinnerPlates(int capacity) 
+    {
         cap = capacity;
     }
     
-    void push(int val) {
+    void push(int val) 
+    {
         // 正常情况下 stackCont 为空时 notFullStack 也为空
         if(stackCont.size() == 0 ){
             // if(notFullStack.size() != 0) cout << "error in push fun" << endl;
