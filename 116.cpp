@@ -23,8 +23,8 @@ public:
     {
         if(!root)
             return nullptr;
-        if(flag)   
-        {  // 将根节点next置为null
+        if(flag) {
+            // 将根节点next置为null
             root->next = nullptr;
             flag = 0;
         } 
