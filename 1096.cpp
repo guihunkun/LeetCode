@@ -21,16 +21,16 @@ public:
                 if(t.empty()) t = p;
                 else{
                     unordered_set<string> temp;
-                    for(auto& x:t){
-                        for(auto& y:p){
+                    for(auto& x:t) {
+                        for(auto& y:p) {
                             temp.insert((string)x+y);
                         }
                     }
                     t = temp;
                 }
             }
-            else if(expression[start] == ','){
-                for(auto& x:t){
+            else if(expression[start] == ',') {
+                for(auto& x:t) {
                     res.insert(x);
                 }
                 t.clear();
