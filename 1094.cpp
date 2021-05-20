@@ -17,8 +17,9 @@ public:
         }
         for(int i = 0; i < N; i++) {
             cur += rec[i];
-            if(cur > capacity)
+            if(cur > capacity) {
                 return false;
+            }
         }
         return true;
     }
