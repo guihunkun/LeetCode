@@ -30,8 +30,7 @@ public:
             {
                 Node* t=q.front();
                 q.pop();
-                if(i != n-1)
-                {
+                if(i != n-1) {
                     Node* tNext=q.front();
                     t->next=tNext;
                 }
