@@ -22,3 +22,4 @@ public:
         return min(n1,n2);
     }
 };
+
