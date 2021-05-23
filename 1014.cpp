@@ -8,8 +8,7 @@ public:
     int maxScoreSightseeingPair(vector<int>& A) 
     {
         int res = 0, cur = A[0] + 0;
-        for(int j = 1; j < A.size(); j++)
-        {
+        for(int j = 1; j < A.size(); j++) {
             res = max(res, cur + A[j] - j);
             cur = max(cur, A[j] + j);
         }
