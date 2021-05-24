@@ -4,8 +4,7 @@ public:
     int twoCitySchedCost(vector<vector<int>>& costs) 
     {
         vector<pair<int,int>> diff(costs.size());
-        for(int i = 0 ; i < costs.size() ;i++)
-        {
+        for(int i = 0 ; i < costs.size() ;i++) {
             diff[i].second = i;
             diff[i].first = costs[i][0] - costs[i][1];            
         }
