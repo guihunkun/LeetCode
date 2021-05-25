@@ -12,8 +12,7 @@ class Solution
 public:
     TreeNode* helperPreIn(vector<int>& preorder, vector<int>& inorder, int prestart, int preend, int instart, int inend)
 	{
-		if(prestart > preend || instart > inend)
-		{
+		if(prestart > preend || instart > inend) {
 			return NULL;
 		}
 
@@ -21,8 +20,7 @@ public:
 		int i;
 		for(i = instart; i <= inend; i++)
 		{
-			if(inorder[i] == node->val)
-			{
+			if(inorder[i] == node->val) {
 				break;
 			}
 		}
