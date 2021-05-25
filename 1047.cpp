@@ -6,8 +6,7 @@ public:
         string s = "";
         if(S.size() <= 1)
             return S;
-        for(int i = 0; i < S.size(); i++)
-        {
+        for(int i = 0; i < S.size(); i++) {
             if(! s.empty() && s.back() == S[i])
                 s.pop_back();
             else
