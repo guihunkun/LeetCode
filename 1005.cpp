@@ -43,14 +43,12 @@ public:
         int sum = 0;
         for(int i=0;i<N;i++) 
             que.push(A[i]);
-        for(int i = 1; i <= K; i++)
-        {
+        for(int i = 1; i <= K; i++) {
             int tmp = que.top();
             que.pop();
             que.push(-tmp);
         }
-        while(!que.empty())
-        {
+        while(!que.empty()) {
             sum += que.top();
             que.pop();
         }
