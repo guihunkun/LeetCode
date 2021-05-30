@@ -3,25 +3,20 @@ class Solution
 public:
     string reorganizeString(string S) 
     {
-        if(S.size() <= 1)
-        {
+        if(S.size() <= 1) {
             return S;
         }
         map<char, int> record;
-        for(auto c : S)
-        {
+        for(auto c : S) {
             record[c]++;
         }
         unsigned int L = (S.size()+1)/2;
         priority_queue<pair<int, char> > pq;
         for(auto m : record)
         {
-            if(m.second > L)
-            {
+            if(m.second > L) {
                 return "";
-            }
-            else
-            {
+            } else {
                 pq.push({m.second, m.first});
             }
         }
