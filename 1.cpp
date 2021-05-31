@@ -14,8 +14,7 @@ public:
             record[nums[i]]=i;
         for(int i=0;i<nums.size();i++)
         {
-            if(record.count(target-nums[i]) && record[target-nums[i]]!=i)
-            {
+            if(record.count(target-nums[i]) && record[target-nums[i]]!=i) {
                 ans.push_back(i);
                 ans.push_back(record[target-nums[i]]);
                 break;
