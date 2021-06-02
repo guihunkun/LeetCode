@@ -10,8 +10,7 @@
 class Solution 
 {
 public:
-    int sumRootToLeaf(TreeNode* root)
-    {
+    int sumRootToLeaf(TreeNode* root) {
         return sumLeaf(0, root);
     }
     int sumLeaf(int val, TreeNode* root)
