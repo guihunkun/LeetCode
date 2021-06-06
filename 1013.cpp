@@ -18,8 +18,7 @@ public:
         if(sum_left != sum / 3)
             return false;
         int right = A.size()-1, sum_right = 0;
-        for(; right >= 1; right--)
-        {
+        for(; right >= 1; right--) {
             sum_right += A[right];
             if(sum_right == sum / 3)
                 break;
