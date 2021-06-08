@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    int videoStitching(vector<vector<int>>& clips, int T) {
+    int videoStitching(vector<vector<int>>& clips, int T) 
+    {
         vector<int> maxn(T);
         int last = 0, ret = 0, pre = 0;
         for (vector<int>& it : clips) {
