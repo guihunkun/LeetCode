@@ -4,8 +4,9 @@ public:
     vector<vector<int>> generate(int numRows) 
     {
         vector<vector<int>> res;
-        if(numRows==0)
+        if(numRows==0) {
             return res;
+        }
         if(numRows==1)
             return {{1}};
         res = {{1}};
