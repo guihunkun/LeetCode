@@ -8,8 +8,7 @@ public:
         {
             int freq = nums[i];
             int val = nums[i+1];
-            for(int j = 0; j < freq; j++)
-            {
+            for(int j = 0; j < freq; j++) {
                 res.push_back(val);
             }
         }
