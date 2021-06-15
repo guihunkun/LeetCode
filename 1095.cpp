@@ -7,6 +7,7 @@
  *     int length();
  * };
  */
+
 class Solution
 {
 public:
