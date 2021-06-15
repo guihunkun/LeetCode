@@ -43,7 +43,8 @@ public:
         vector<int> mono;
         mono.push_back(0);
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++) 
+        {
             int l = 0, r = mono.size() - 1;
             while (l < r) {
                 int mid = (l + r) >> 1;
@@ -70,7 +71,8 @@ public:
         int sum = 0, ans = 0;
 
         unordered_map<int, int> visited;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) 
+        {
             sum += (hours[i] > 8 ? 1 : -1);
             if (sum > 0)
                 ans = i + 1;
