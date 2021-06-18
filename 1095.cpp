@@ -19,10 +19,11 @@ public:
             int m=(l+r)/2;
             int m_val=mountainArr.get(m);
             int m_r_val=mountainArr.get(m+1);
-            if(m_val<m_r_val)
+            if(m_val<m_r_val) {
                 l=m+1;
-            else
+            } else {
                 r=m-1;
+            }
         }
         return l;
     }
@@ -59,3 +60,6 @@ public:
         return -1;
     }
 };
+
+
+
