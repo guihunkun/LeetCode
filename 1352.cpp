@@ -16,8 +16,7 @@ public:
         n++;
         vec.push_back(num);
         pre.push_back(-1);
-        if(n>1)
-        {
+        if(n>1) {
             if (vec[n-2]!=1 && vec[n-2]!=0) pre[n-1]=n-2;
             else pre[n-1]=pre[n-2];
         }
@@ -34,8 +33,7 @@ public:
         if(tot>0) 
             return 0;
         int ans=1;
-        for(int i=n-1;i>=n-k;)
-        {
+        for(int i=n-1;i>=n-k;) {
             ans*=vec[i];
             i=pre[i];
         }
