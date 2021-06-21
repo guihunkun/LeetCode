@@ -8,6 +8,7 @@
  * };
  */
 
+
 class Solution
 {
 public:
@@ -27,6 +28,8 @@ public:
         }
         return l;
     }
+    
+    
     int findInMountainArray(int target, MountainArray &mountainArr)
     {
         int peak=find_peak(mountainArr);
