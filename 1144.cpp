@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    int movesToMakeZigzag(vector<int>& nums) {
+    int movesToMakeZigzag(vector<int>& nums) 
+    {
         if (nums.size() < 2) 
             return 0;
         int s1 = 0;
