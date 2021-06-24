@@ -23,8 +23,7 @@ public:
     {
         for(int i= s.size()-1; i>=0; i--)
         {
-            if(!troot->children[s[i]-'a'])
-            {
+            if(!troot->children[s[i]-'a']) {
                 troot->children[s[i]-'a'] = getNode();
             }
             troot = troot->children[s[i]-'a'];
@@ -59,8 +58,7 @@ public:
     }
     
     bool query(char letter) {
-        if(qst.size() >=maxwsz )
-        {
+        if(qst.size() >=maxwsz ) {
             qst.erase(qst.begin());
         }
         qst.push_back(letter);
