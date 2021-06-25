@@ -11,8 +11,9 @@ public:
             num = num << 1;
             num += A[i];
             num %= 5;
-            if(num == 0)
+            if(num == 0) {
                 res[i] = true;
+            }
         }
         return res;        
     }
