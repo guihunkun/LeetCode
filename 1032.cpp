@@ -13,8 +13,7 @@ public:
     tnode* getNode()
     {
         tnode* nnd = new tnode();
-        for(int i=0; i<25; i++)
-        {
+        for(int i=0; i<25; i++) {
             nnd->children[i]=0;
         }
         return nnd;
@@ -57,7 +56,8 @@ public:
         return troot->completeword;
     }
     
-    bool query(char letter) {
+    bool query(char letter) 
+    {
         if(qst.size() >=maxwsz ) {
             qst.erase(qst.begin());
         }
