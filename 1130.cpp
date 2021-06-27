@@ -19,7 +19,8 @@ public:
         int top = stk.top();
         stk.pop();
         // 单调递减队列,
-        while(!stk.empty()) {
+        while(!stk.empty()) 
+        {
             int tmp_top = stk.top();
             if(tmp_top == INT_MAX) {
                 break;
@@ -31,3 +32,4 @@ public:
         return res;
     }
 };
+
