@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    bool uniqueOccurrences(vector<int>& arr) {
+    bool uniqueOccurrences(vector<int>& arr) 
+    {
         unordered_map<int, int> occur;
         for (const auto& x: arr) {
             occur[x]++;
