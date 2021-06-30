@@ -2,7 +2,8 @@
 class Solution 
 {
 public:
-    vector<int> topSort(vector<int>& deg, vector<vector<int>>& graph, vector<int>& items) {
+    vector<int> topSort(vector<int>& deg, vector<vector<int>>& graph, vector<int>& items) 
+    {
         queue<int> Q;
         for (auto& item: items) {
             if (deg[item] == 0) {
@@ -23,14 +24,15 @@ public:
         return res.size() == items.size() ? res : vector<int>{};
     }
 
-    vector<int> sortItems(int n, int m, vector<int>& group, vector<vector<int>>& beforeItems) {
+    vector<int> sortItems(int n, int m, vector<int>& group, vector<vector<int>>& beforeItems) 
+    {
         vector<vector<int>> groupItem(n + m);
 
-        // ×é¼äºÍ×éÄÚÒÀÀµÍ¼
+        // ç»„é—´å’Œç»„å†…ä¾èµ–å›¾
         vector<vector<int>> groupGraph(n + m);
         vector<vector<int>> itemGraph(n);
 
-        // ×é¼äºÍ×éÄÚÈë¶ÈÊı×é
+        // ç»„é—´å’Œç»„å†…å…¥åº¦æ•°ç»„
         vector<int> groupDegree(n + m, 0);
         vector<int> itemDegree(n, 0);
         
@@ -40,7 +42,7 @@ public:
         }
 
         int leftId = m;
-        // ¸øÎ´·ÖÅäµÄ item ·ÖÅäÒ»¸ö groupId
+        // ç»™æœªåˆ†é…çš„ item åˆ†é…ä¸€ä¸ª groupId
         for (int i = 0; i < n; ++i) {
             if (group[i] == -1) {
                 group[i] = leftId;
@@ -48,7 +50,7 @@ public:
             }
             groupItem[group[i]].emplace_back(i);
         }
-        // ÒÀÀµ¹ØÏµ½¨Í¼
+        // ä¾èµ–å…³ç³»å»ºå›¾
         for (int i = 0; i < n; ++i) {
             int curGroupId = group[i];
             for (auto& item: beforeItems[i]) {
@@ -63,13 +65,13 @@ public:
             }
         }
 
-        // ×é¼äÍØÆË¹ØÏµÅÅĞò
+        // ç»„é—´æ‹“æ‰‘å…³ç³»æ’åº
         vector<int> groupTopSort = topSort(groupDegree, groupGraph, id); 
         if (groupTopSort.size() == 0) {
             return vector<int>{};
         } 
         vector<int> ans;
-        // ×éÄÚÍØÆË¹ØÏµÅÅĞò
+        // ç»„å†…æ‹“æ‰‘å…³ç³»æ’åº
         for (auto& curGroupId: groupTopSort) {
             int size = groupItem[curGroupId].size();
             if (size == 0) {
