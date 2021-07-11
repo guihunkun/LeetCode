@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    int get(int x){
+    int get(int x)
+    {
         int res = 0;
         while (x) {
             res += (x % 2);
