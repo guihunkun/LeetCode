@@ -27,6 +27,7 @@ public:
             low = min(low,prices[i]);
         }
     }
+    
     void right(vector<int> prices,int *&dp)
     {
         int ans=0;
@@ -38,4 +39,5 @@ public:
             high = max(high,prices[i]);
         }
     }
+    
 };
