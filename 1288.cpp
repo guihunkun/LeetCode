@@ -17,6 +17,7 @@ public:
             return a[0] < b[0];
         }
     }
+   
     int removeCoveredIntervals(vector<vector<int> >& intervals) 
     {
         sort(intervals.begin(), intervals.end(), compare);
@@ -35,4 +36,6 @@ public:
         return count;
     }
 };
+
+
 
