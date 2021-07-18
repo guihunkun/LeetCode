@@ -1,12 +1,14 @@
-class Solution {
+class Solution 
+{
 public:
-    int shipWithinDays(vector<int>& weights, int D) {
-        // 确定二分查找左右边界
+    int shipWithinDays(vector<int>& weights, int D) 
+    {
+        // 纭畾浜屽垎鏌ユ壘宸﹀彸杈圭晫
         int left = *max_element(weights.begin(), weights.end()), right = accumulate(weights.begin(), weights.end(), 0);
         while (left < right) {
             int mid = (left + right) / 2;
-            // need 为需要运送的天数
-            // cur 为当前这一天已经运送的包裹重量之和
+            // need 涓洪渶瑕佽繍閫佺殑澶╂暟
+            // cur 涓哄綋鍓嶈繖涓�澶╁凡缁忚繍閫佺殑鍖呰９閲嶉噺涔嬪拰
             int need = 1, cur = 0;
             for (int weight: weights) {
                 if (cur + weight > mid) {
