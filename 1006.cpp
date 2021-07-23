@@ -1,11 +1,13 @@
-class Solution {
+class Solution 
+{
 public:
-    int clumsy(int N) {
+    int clumsy(int N) 
+    {
         stack<int> stk;
         stk.push(N);
         N--;
 
-        int index = 0; // 用于控制乘、除、加、减
+        int index = 0; // 鐢ㄤ簬鎺у埗涔樸�侀櫎銆佸姞銆佸噺
         while (N > 0) {
             if (index % 4 == 0) {
                 stk.top() *= N;
@@ -20,7 +22,7 @@ public:
             N--;
         }
 
-        // 把栈中所有的数字依次弹出求和
+        // 鎶婃爤涓墍鏈夌殑鏁板瓧渚濇寮瑰嚭姹傚拰
         int sum = 0;
         while (!stk.empty()) {
             sum += stk.top();
