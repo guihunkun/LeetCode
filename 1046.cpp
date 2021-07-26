@@ -9,8 +9,9 @@ public:
          * 小根堆(升序队列) : priority_queue<int, vector<int>, greater<int> > pq; 
          */
         priority_queue<int> record;
-        for(int weight : stones)
+        for(int weight : stones) {
             record.push(weight);
+        }
         while(! record.empty())
         {
             if(record.size() == 1)
