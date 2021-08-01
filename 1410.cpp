@@ -13,8 +13,7 @@ public:
         while((endPos != -1) && (beginPos != -1)) 
         {
             string strTmp = resStr.substr(beginPos, endPos - beginPos + 1);
-            if(strChangMap.find(strTmp) != strChangMap.end()) 
-            {
+            if(strChangMap.find(strTmp) != strChangMap.end()) {
                 resStr.replace(resStr.begin() + beginPos, resStr.begin() + endPos + 1, strChangMap[strTmp]);
             }
             beginPos = resStr.find('&', beginPos + 1);
