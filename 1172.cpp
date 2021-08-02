@@ -73,6 +73,7 @@ public:
         return val;
     }
 };
+
 /**
  * Your DinnerPlates object will be instantiated and called as such:
  * DinnerPlates* obj = new DinnerPlates(capacity);
