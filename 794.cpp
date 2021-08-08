@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-	inline bool checkWin(vector<string> & board, const char & c) {
+	inline bool checkWin(vector<string> & board, const char & c)
+	{
 		/* ≈–∂œ––∫Õ¡– */
 		for (int i = 0; i < 3; ++i) {
 			if (c == board[i][0] && c == board[i][1] && c == board[i][2]) {
