@@ -8,7 +8,8 @@ public:
         int s1 = 0;
         int s2 = 0;
         int N = nums.size();
-        for (int i = 0; i < N; ++i) {
+        for (int i = 0; i < N; ++i) 
+        {
             int l = (i > 0) ? nums[i - 1] : INT_MAX;
             int r = (i < N - 1) ? nums[i + 1] : INT_MAX;
             if (i%2 == 1) {
