@@ -1,5 +1,6 @@
 //leetcode
-struct BIT {
+struct BIT 
+{
     vector<int> a;
     int n;
     
