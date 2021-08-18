@@ -68,6 +68,8 @@ public:
     }
 };
 
+
+
 /**
  * Your StreamChecker object will be instantiated and called as such:
  * StreamChecker* obj = new StreamChecker(words);
