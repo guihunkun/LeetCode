@@ -72,7 +72,6 @@ public:
 };
 #endif
 
-
 int main()
 {
 	string s1="aabb aa";//"A man, a plan, a canal: Panama";
