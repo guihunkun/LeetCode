@@ -44,10 +44,8 @@ private:
             ans = max(ans, len);
             return ;
         }
-
         // 不串联arr[idx]
         backtrace(arr, bits, idx + 1, track, len);
-
         // 如果arr[idx]本身是合格的并且和串联后的字符串没有重复字符则串联arr[i]
         if (bits[idx] != -1 && (track & bits[idx]) == 0) {
             backtrace(arr, bits, idx + 1, track | bits[idx], len + arr[idx].size());
