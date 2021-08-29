@@ -1,8 +1,10 @@
 class Solution 
 {
 public:
+    
     int h[26];
 
+    
     inline bool haveChar() 
     {
         for(int i = 0; i < 26; ++i) 
