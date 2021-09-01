@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
+    vector<int> smallerNumbersThanCurrent(vector<int>& nums) 
+    {
         vector<pair<int, int>> data;
         int n = nums.size();
         for (int i = 0; i < n; i++) {
