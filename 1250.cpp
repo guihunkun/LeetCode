@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    bool isGoodArray(vector<int>& nums) {
+    bool isGoodArray(vector<int>& nums) 
+    {
         set<int> s(nums.begin(), nums.end());
         if(*s.begin()==1) return true;
         auto it = s.rbegin();
