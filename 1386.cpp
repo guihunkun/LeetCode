@@ -1,7 +1,9 @@
 
-class Solution {
+class Solution 
+{
 public:
-    int maxNumberOfFamilies(int n, vector<vector<int>>& reservedSeats) {
+    int maxNumberOfFamilies(int n, vector<vector<int>>& reservedSeats) 
+    {
         int left = 0b11110000;
         int middle = 0b11000011;
         int right = 0b00001111;
