@@ -38,9 +38,11 @@ struct Edge {
     }
 };
 
-class Solution {
+class Solution 
+{
 public:
-    int minCostConnectPoints(vector<vector<int>>& points) {
+    int minCostConnectPoints(vector<vector<int>>& points) 
+    {
         auto dist = [&](int x, int y) -> int {
             return abs(points[x][0] - points[y][0]) + abs(points[x][1] - points[y][1]);
         };
