@@ -6,8 +6,7 @@ public:
         map<int, vector<int> > rec;
         for(int i = nums.size()-1; i >= 0; i--)
         {
-            for(int j = 0; j < nums[i].size(); j++)
-            {
+            for(int j = 0; j < nums[i].size(); j++) {
                 rec[i+j].push_back(nums[i][j]);
             }
         }
@@ -15,8 +14,7 @@ public:
         res.reserve(200100);
         for(auto& rec_iter : rec)
         {
-            for(auto& num : rec_iter.second)
-            {
+            for(auto& num : rec_iter.second) {
                 res.push_back(num);
             }
         }
