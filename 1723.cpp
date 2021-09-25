@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    int minimumTimeRequired(vector<int>& jobs, int k) {
+    int minimumTimeRequired(vector<int>& jobs, int k) 
+    {
         int n = jobs.size();
         vector<int> sum(1 << n);
         for (int i = 1; i < (1 << n); i++) {
