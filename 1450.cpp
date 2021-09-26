@@ -6,8 +6,9 @@ public:
         int res = 0;
         for(int i = 0; i < startTime.size(); i++)
         {
-            if(startTime[i] <= queryTime && endTime[i] >= queryTime)
+            if(startTime[i] <= queryTime && endTime[i] >= queryTime) {
                 res++;
+            }
         }
         return res;
     }
