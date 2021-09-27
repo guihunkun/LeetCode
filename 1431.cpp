@@ -11,8 +11,7 @@ public:
         vector<bool> res(candies.size(), false);
         for(int i = 0; i < candies.size(); i++)
         {
-            if(candies[i] + extraCandies >= maxCandie)
-            {
+            if(candies[i] + extraCandies >= maxCandie) {
                 res[i] = true;
             }
         }
