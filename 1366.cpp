@@ -1,23 +1,25 @@
-class Solution {
+class Solution 
+{
 public:
-    string rankTeams(vector<string>& votes) {
+    string rankTeams(vector<string>& votes)
+    {
         int n = votes.size();
-        // ³õÊ¼»¯¹şÏ£Ó³Éä
+        // åˆå§‹åŒ–å“ˆå¸Œæ˜ å°„
         unordered_map<char, vector<int>> ranking;
         for (char vid: votes[0]) {
             ranking[vid].resize(votes[0].size());
         }
-        // ±éÀúÍ³¼Æ
+        // éå†ç»Ÿè®¡
         for (const string& vote: votes) {
             for (int i = 0; i < vote.size(); ++i) {
                 ++ranking[vote[i]][i];
             }
         }
         
-        // È¡³öËùÓĞµÄ¼üÖµ¶Ô
+        // å–å‡ºæ‰€æœ‰çš„é”®å€¼å¯¹
         using PCV = pair<char, vector<int>>;
         vector<PCV> result(ranking.begin(), ranking.end());
-        // ÅÅĞò
+        // æ’åº
         sort(result.begin(), result.end(), [](const PCV& l, const PCV& r) {
             return l.second > r.second || (l.second == r.second && l.first < r.first);
         });
