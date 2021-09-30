@@ -1,12 +1,15 @@
-class Solution {
+class Solution 
+{
 public:
-    int get(const vector<vector<int>>& pre, int m, int n, int x, int y) {
+    int get(const vector<vector<int>>& pre, int m, int n, int x, int y) 
+    {
         x = max(min(x, m), 0);
         y = max(min(y, n), 0);
         return pre[x][y];
     }
     
-    vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int K) {
+    vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int K) 
+    {
         int m = mat.size(), n = mat[0].size();
         vector<vector<int>> P(m + 1, vector<int>(n + 1));
         for (int i = 1; i <= m; ++i) {
