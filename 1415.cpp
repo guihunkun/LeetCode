@@ -3,7 +3,7 @@ class Solution
 public:
 	vector<string> v;
 	string getHappyString(int n, int k) 
-    {
+	{
 		dfs(n, 0, "");
 		int size = v.size();
 		if(size < k)
@@ -26,7 +26,7 @@ public:
             dfs(n, cur + 1, tmp + 'c');
 	}
 	bool check(string &tmp,char a)
-    {
+        {
 		if(tmp.empty())
             return true;
 		return tmp[tmp.size() - 1] != a;
