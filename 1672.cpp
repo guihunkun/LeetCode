@@ -8,8 +8,7 @@ public:
         for(int i = 0; i < accounts.size(); i++)
         {
             money = 0;
-            for(int j = 0; j < accounts[i].size(); j++)
-            {
+            for(int j = 0; j < accounts[i].size(); j++) {
                 money += accounts[i][j]; 
             }
             res = max(res, money);
