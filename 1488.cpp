@@ -10,8 +10,7 @@ public:
         for(int i = 0; i < rains.size(); i++) 
         {
             int r = rains[i];
-            if(r == 0) 
-            {
+            if(r == 0) {
                 zero.insert(i);
                 continue;
             }
