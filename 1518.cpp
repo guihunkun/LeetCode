@@ -4,8 +4,7 @@ public:
     int numWaterBottles(int numBottles, int numExchange) 
     {
         int bottle = numBottles, res = numBottles;
-        while(bottle >= numExchange) 
-        {
+        while(bottle >= numExchange) {
             bottle -= numExchange;
             ++res;
             ++bottle;
