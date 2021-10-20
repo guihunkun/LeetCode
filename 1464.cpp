@@ -21,13 +21,10 @@ public:
             if(nums[i] > secNum)
             {
                 int temp = maxNum;
-                if(nums[i] >= maxNum)
-                {
+                if(nums[i] >= maxNum) {
                     maxNum = nums[i];
                     secNum = temp;
-                }
-                else
-                {
+                } else {
                     secNum = nums[i];
                 }
             }
