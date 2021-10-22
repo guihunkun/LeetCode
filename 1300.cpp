@@ -5,8 +5,7 @@ public:
     {
         sort(arr.begin(), arr.end());
         vector<int> pre(arr.size()+1, 0);
-        for( int i = 1; i <= arr.size(); i++)
-        {
+        for( int i = 1; i <= arr.size(); i++) {
             pre[i] = pre[i-1] + arr[i-1];
         }
         int max = *max_element(arr.begin(), arr.end());
