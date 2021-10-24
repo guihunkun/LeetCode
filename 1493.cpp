@@ -7,14 +7,12 @@ public:
         int res = 0, numOfZero = 0;
         for(; right < nums.size(); right++)
         {
-            if(nums[right] == 0)
-            {
+            if(nums[right] == 0) {
                 numOfZero++;
             }
             while(numOfZero > 1)
             {
-                if(nums[left] == 0)
-                {
+                if(nums[left] == 0) {
                     numOfZero--;
                 }
                 left++;
