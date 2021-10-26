@@ -8,8 +8,7 @@ public:
         for(int i = 1; i <= n; ++i) 
         {
             int key = 0, i0 = i;
-            while(i0) 
-            {
+            while(i0) {
                 key += i0 % 10;
                 i0 /= 10;
             }
@@ -19,8 +18,7 @@ public:
         int count = 0;
         for(auto& kvpair: hashMap)
         {
-            if(kvpair.second == maxValue) 
-            {
+            if(kvpair.second == maxValue) {
                 ++count;
             }
         }
