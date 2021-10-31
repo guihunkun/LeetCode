@@ -14,9 +14,11 @@ using namespace std;
             count[s[i]-'a'] ++;
         for(int i = 0; i < t.size(); i ++)
             count[t[i]-'a'] --;
-        for(int i = 0; i < 26; i ++)
-            if(count[i] != 0)
+        for(int i = 0; i < 26; i ++) {
+            if(count[i] != 0) {
                 return false;
+	    }
+	}
         return true;
     }
 
