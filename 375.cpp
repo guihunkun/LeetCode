@@ -22,8 +22,11 @@ public:
                     //左边开始的值为i,右边开始的值为j+i+1,切分点为j+i
                     int tmp = max(dp[j][i], dp[len-j-1][j+i+1])+a[j+i];
                     //部分最大，整体最小
-                    if(j==0) global = tmp;
-                    else global = min(global, tmp);
+                    if(j==0) {
+                        global = tmp;
+                    } else {
+                        global = min(global, tmp);
+                    }
                 }
                 dp[len][i] = global;
             }
