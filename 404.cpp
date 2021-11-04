@@ -16,8 +16,7 @@ public:
         if(root == NULL)
             return 0;
         long long sumleft = 0;
-        if(root->left && root->left->left == NULL && root->left->right == NULL)
-        {
+        if(root->left && root->left->left == NULL && root->left->right == NULL) {
             sumleft += root->left->val;
         }
         if(root->left)
