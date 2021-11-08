@@ -6,14 +6,16 @@ public:
         string  Vowels = "aeiouAEIOU";
         for(int i = 0; i < Vowels.size(); ++i)
         {
-            if(c == Vowels[i]) return true;
+            if(c == Vowels[i]) 
+                return true;
         }
         return false;
     }
     string reverseVowels(string s) 
     {
         int i = 0, j = s.size() - 1;
-        while(i < j){
+        while(i < j)
+        {
             if(!isVowels(s[i])) 
                 ++i;
             if(!isVowels(s[j])) 
