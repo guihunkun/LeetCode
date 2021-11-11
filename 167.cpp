@@ -29,8 +29,9 @@ int main()
 {
 	int  v1[] = {1,2,3,4};
 	vector<int> nums;
-	for(int i=0;i<4;i++)
+	for(int i=0;i<4;i++) {
 		nums.push_back(v1[i]);
+	}
 	twoSum(nums,3); 
 	return 0;
 }
