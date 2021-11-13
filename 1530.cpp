@@ -9,12 +9,14 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution 
+{
 public:
     // 对于 dfs(root,distance)，同时返回：
     // 1）每个叶子节点与 root 之间的距离
     // 2) 以 root 为根节点的子树中好叶子节点对的数量
-    pair<vector<int>, int> dfs(TreeNode* root, int distance) {
+    pair<vector<int>, int> dfs(TreeNode* root, int distance) 
+    {
         vector<int> depths(distance + 1, 0);
         bool isLeaf = (!root->left && !root->right);
         if (isLeaf) { 
@@ -37,7 +39,8 @@ public:
         }
 
         int cnt = 0;
-        for (int i = 0; i <= distance; i++) {
+        for (int i = 0; i <= distance; i++) 
+        {
             for (int j = 0; j + i + 2 <= distance; j++) {
                 cnt += (leftDepths[i] * rightDepths[j]);
             }
@@ -45,7 +48,8 @@ public:
         return make_pair(depths, cnt + leftCount + rightCount);
     }
 
-    int countPairs(TreeNode* root, int distance) {
+    int countPairs(TreeNode* root, int distance) 
+    {
         auto [depths, ret] = dfs(root, distance);
         return ret;
     }
