@@ -15,15 +15,13 @@ public:
             num = (num == 1) ? 2 : 1;      
             auto q = que.front();
             que.pop();
-            if(q == 2)
-            {
+            if(q == 2) {
                 que.push(num);
                 i++;
                 ans += (num == 1);
                 //cout << num << ",";
             }
-            if(i < n)
-            {
+            if(i < n) {
                 que.push(num);
                 i++;
                 ans += (num == 1);
