@@ -27,8 +27,8 @@ public:
             }else{
                 ListNode* tmp_pre=NULL;
                 ListNode* tmp_cur=new_head;
-                while(tmp_cur!=NULL&&cur->val>tmp_cur->val)
-                { //bug2:注意不能少了判断语句tmp_cur!=NULL
+                while(tmp_cur!=NULL&&cur->val>tmp_cur->val) { 
+                        //bug2:注意不能少了判断语句tmp_cur!=NULL
                         tmp_pre=tmp_cur;
                         tmp_cur=tmp_cur->next;
                 }
