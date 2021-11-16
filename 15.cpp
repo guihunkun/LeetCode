@@ -37,8 +37,7 @@ int main(int argc, char *argv[])
     vecTest.push_back(vec_int);
 
     auto iter = vecTest.begin();
-    for(int i = 0;i<vec_int.size();++i)
-    {
+    for(int i = 0;i<vec_int.size();++i) {
         cout << (*iter)[i] << endl;
     }
     return 0;
