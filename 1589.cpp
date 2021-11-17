@@ -1,11 +1,14 @@
 //leetcode
-class Solution {
+class Solution 
+{
 public:
-    int maxSumRangeQuery(vector<int>& nums, vector<vector<int>>& requests) {
+    int maxSumRangeQuery(vector<int>& nums, vector<vector<int>>& requests) 
+    {
         int MODULO = 1000000007;
         int length = nums.size();
         auto counts = vector<int>(length);
-        for (auto request: requests) {
+        for (auto request: requests) 
+        {
             int start = request[0], end = request[1];
             counts[start]++;
             if (end + 1 < length) {
