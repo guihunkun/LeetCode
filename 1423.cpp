@@ -21,3 +21,5 @@ public:
         return sum - minW;
     }
 };
+
+
