@@ -45,8 +45,7 @@ public:
         if(root == NULL)
             return res;
         vector<vector<int> > record = levelOrder(root) ;
-        for(int i = 0; i < record.size(); i++)
-        {
+        for(int i = 0; i < record.size(); i++) {
             res.push_back(record[i][record[i].size() - 1]);
         }
         return res;
