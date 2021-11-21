@@ -1,9 +1,11 @@
-class UnionFind {
+class UnionFind 
+{
   int n;
   vector<int> parent, size;
 
 public:
-  UnionFind(int n) {
+  UnionFind(int n) 
+ {
     this->n = n;
     parent = vector<int>(n);
     size = vector<int>(n, 1);
@@ -31,7 +33,8 @@ public:
   }
 };
 
-class Solution {
+class Solution 
+{
 public:
     vector<bool> areConnected(int n, int threshold, vector<vector<int>>& queries) {
         UnionFind uf(n + 1);
