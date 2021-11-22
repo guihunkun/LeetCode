@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
 private:
     int numsSorted[100000]; //用于归并的辅助数组，这里值即定义在外面，省的每次归并都要重新申请
     //统计出某个数字左边比它小的数字个数
