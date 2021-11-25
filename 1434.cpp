@@ -13,9 +13,12 @@ public:
     for (int i = 0; i < n; ++i)
       for (int hat : hats[i])
         s[hat].insert(i);
-    for (int i = 1; i <= 40; ++i) {
-      for (int state = (1 << n) - 1; state >= 0; --state) {
-        for (int person : s[i]) {
+    for (int i = 1; i <= 40; ++i) 
+    {
+      for (int state = (1 << n) - 1; state >= 0; --state) 
+      {
+        for (int person : s[i]) 
+        {
           if (state & (1 << person))
             continue;
           int nxt = state + (1 << person);
