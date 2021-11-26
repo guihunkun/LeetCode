@@ -9,7 +9,9 @@
 */
 //点到此点的斜率【用x:y的形式，最简形式】，然后用map存次数
 
-class Solution {
+
+class Solution 
+{
 public:
     int gcd(int a, int b) 
     {//最大公约数
