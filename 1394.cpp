@@ -9,7 +9,8 @@ public:
             rec[arr[i]]++;
         }
         map<int, int>::iterator iter = rec.begin();
-        for(; iter != rec.end(); iter++) {
+        for(; iter != rec.end(); iter++) 
+        {
             if((*iter).first == (*iter).second) {
                 res = max(res, (*iter).second);
             }
