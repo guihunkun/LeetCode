@@ -14,8 +14,7 @@ public:
 public:
     void addToStack(TreeNode* node) 
     {
-        while(node) 
-        {
+        while(node) {
             s.push(node);
             node = node->left;
         }
