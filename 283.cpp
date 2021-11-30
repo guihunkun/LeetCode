@@ -27,8 +27,9 @@ int main()
 {
 	vector<int> nums;
 	nums.push_back(0);
-	for(int i=1;i<7;i++)
+	for(int i=1;i<7;i++) {
 		nums.push_back(i+1);
+	}
 		
 	moveZeroes(nums);
 	return 0;
