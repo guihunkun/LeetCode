@@ -17,7 +17,8 @@ public:
         for (int i = 0; i < k && i < nums.size(); ++i)
             AddToDeque(d, nums[i]);
         vector<int> result;
-        for (int i = k; i < nums.size(); ++i) {
+        for (int i = k; i < nums.size(); ++i) 
+        {
             result.push_back(d[0]);
             if (d[0] == nums[i - k]) {
                 d.pop_front();
