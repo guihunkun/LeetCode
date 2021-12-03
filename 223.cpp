@@ -9,8 +9,9 @@ public:
         int yBot = max(F,B);
         
         int s = (C-A) * (D-B);
-        if (xRight > xLeft && yTop > yBot)                        
-            s -= (xRight - xLeft)*(yTop - yBot);            
+        if (xRight > xLeft && yTop > yBot) {                        
+            s -= (xRight - xLeft)*(yTop - yBot); 
+        }           
         s += (G-E) * (H-F);
         return s;
     }
