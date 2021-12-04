@@ -1,6 +1,8 @@
-class Solution {
+class Solution 
+{
 public:
-    int minDays(vector<int>& bloomDay, int m, int k) {
+    int minDays(vector<int>& bloomDay, int m, int k) 
+    {
         if (k * m > bloomDay.size()) {
             return -1;
         }
@@ -20,7 +22,8 @@ public:
         return low;
     }
 
-    bool canMake(vector<int>& bloomDay, int days, int m, int k) {
+    bool canMake(vector<int>& bloomDay, int days, int m, int k) 
+    {
         int bouquets = 0;
         int flowers = 0;
         int length = bloomDay.size();
