@@ -13,7 +13,8 @@ public:
         // std::cout << "Capacity = " << capacity << "\n\n";
     }
     
-    int get(int key) {
+    int get(int key) 
+    {
         // std::cout << "Getting " << key << "\n";
         if (cache.find(key) == cache.end())     
             return -1;
