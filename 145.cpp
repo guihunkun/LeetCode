@@ -70,18 +70,18 @@ public:
         stack<TreeNode*> sta;
         sta.push(root);
         while(!sta.empty()) 
-		{
+	{
 			TreeNode* node = sta.top();
 			sta.pop();
             res.push_back(node->val);
-            // 实现逆序
+            // 瀹炵幇閫嗗簭
             if(node->left)
 				sta.push(node->left);
             if(node->right)
 				sta.push(node->right);
 			
         }
-        // 将结果进行逆序
+        // 灏嗙粨鏋滆繘琛岄�嗗簭
         reverse(res.begin(), res.end());
 		return res;
     }
