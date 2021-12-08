@@ -17,8 +17,9 @@ public:
     
     int sumRange(int i, int j) 
     {
-        if (0 == i)
+        if (0 == i) {
             return su[j];
+        }
 
         /*if (i < 0 || i >= su.size() || j < 0 || j >= su.size() || i > j)
         {
