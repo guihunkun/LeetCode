@@ -1,11 +1,11 @@
 template <typename T>
 struct hungarian {  // km
   int n;
-  vector<int> matchx;  // ×ó¼¯ºÏ¶ÔÓ¦µÄÆ¥Åäµã
-  vector<int> matchy;  // ÓÒ¼¯ºÏ¶ÔÓ¦µÄÆ¥Åäµã
-  vector<int> pre;     // Á¬½ÓÓÒ¼¯ºÏµÄ×óµã
-  vector<bool> visx;   // °İ·ÃÊı×é ×ó
-  vector<bool> visy;   // °İ·ÃÊı×é ÓÒ
+  vector<int> matchx;  // å·¦é›†åˆå¯¹åº”çš„åŒ¹é…ç‚¹
+  vector<int> matchy;  // å³é›†åˆå¯¹åº”çš„åŒ¹é…ç‚¹
+  vector<int> pre;     // è¿æ¥å³é›†åˆçš„å·¦ç‚¹
+  vector<bool> visx;   // æ‹œè®¿æ•°ç»„ å·¦
+  vector<bool> visy;   // æ‹œè®¿æ•°ç»„ å³
   vector<T> lx;
   vector<T> ly;
   vector<vector<T> > g;
@@ -34,7 +34,7 @@ struct hungarian {  // km
   }
 
   void addEdge(int u, int v, int w) {
-    g[u][v] = max(w, 0);  // ¸ºÖµ»¹²»Èç²»Æ¥Åä Òò´ËÉèÎª0²»Ó°Ïì
+    g[u][v] = max(w, 0);  // è´Ÿå€¼è¿˜ä¸å¦‚ä¸åŒ¹é… å› æ­¤è®¾ä¸º0ä¸å½±å“
   }
 
   bool check(int v) {
@@ -44,7 +44,7 @@ struct hungarian {  // km
       visx[matchy[v]] = true;  // in S
       return false;
     }
-    // ÕÒµ½ĞÂµÄÎ´Æ¥Åäµã ¸üĞÂÆ¥Åäµã pre Êı×é¼ÇÂ¼×Å"·ÇÆ¥Åä±ß"ÉÏÓëÖ®ÏàÁ¬µÄµã
+    // æ‰¾åˆ°æ–°çš„æœªåŒ¹é…ç‚¹ æ›´æ–°åŒ¹é…ç‚¹ pre æ•°ç»„è®°å½•ç€"éåŒ¹é…è¾¹"ä¸Šä¸ä¹‹ç›¸è¿çš„ç‚¹
     while (v != -1) {
       matchy[v] = pre[v];
       swap(v, matchx[pre[v]]);
@@ -69,15 +69,15 @@ struct hungarian {  // km
               pre[v] = u;
               if (delta) {
                 slack[v] = delta;
-              } else if (check(v)) {  // delta=0 ´ú±íÓĞ»ú»á¼ÓÈëÏàµÈ×ÓÍ¼ ÕÒÔö¹ãÂ·
-                                      // ÕÒµ½¾Íreturn ÖØ½¨½»´íÊ÷
+              } else if (check(v)) {  // delta=0 ä»£è¡¨æœ‰æœºä¼šåŠ å…¥ç›¸ç­‰å­å›¾ æ‰¾å¢å¹¿è·¯
+                                      // æ‰¾åˆ°å°±return é‡å»ºäº¤é”™æ ‘
                 return;
               }
             }
           }
         }
       }
-      // Ã»ÓĞÔö¹ãÂ· ĞŞ¸Ä¶¥±ê
+      // æ²¡æœ‰å¢å¹¿è·¯ ä¿®æ”¹é¡¶æ ‡
       T a = inf;
       for (int j = 0; j < n; j++) {
         if (!visy[j]) {
@@ -103,7 +103,7 @@ struct hungarian {  // km
   }
 
   int solve() {
-    // ³õÊ¼¶¥±ê
+    // åˆå§‹é¡¶æ ‡
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < n; j++) {
         lx[i] = max(lx[i], g[i][j]);
@@ -131,12 +131,14 @@ struct hungarian {  // km
 
 class Solution {
 public:
-    int connectTwoGroups(vector<vector<int>>& cost) {
+    int connectTwoGroups(vector<vector<int>>& cost) 
+    {
         int n = cost.size();
         int m = cost[0].size();
         hungarian<int> hg(n, m);
         vector<int> lmin(n, INT_MAX), rmin(m, INT_MAX);
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < n; ++i) 
+        {
             for (int j = 0; j < m; ++j) {
                 lmin[i] = min(lmin[i], cost[i][j]);
                 rmin[j] = min(rmin[j], cost[i][j]);
