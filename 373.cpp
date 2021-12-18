@@ -48,10 +48,8 @@ public:
         {
             vector<int> temp;
             auto p = pq.top();
-
             temp.push_back(p.second.first);
             temp.push_back(p.second.second);
-
             pq.pop();
             ans.push_back(temp);
         }
