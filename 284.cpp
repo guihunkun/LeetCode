@@ -47,7 +47,8 @@ public:
         return return_value;
 	}
 
-	bool hasNext() const {
+	bool hasNext() const 
+	{
 	    return has_data;
 	}
 };
