@@ -16,8 +16,9 @@ public:
     int get(int key) 
     {
         // std::cout << "Getting " << key << "\n";
-        if (cache.find(key) == cache.end())     
+        if (cache.find(key) == cache.end()) {
             return -1;
+        }
         int val = (cache[key])->second;
         cacheDLL.erase(cache[key]);
         cacheDLL.push_front(make_pair(key,val));
