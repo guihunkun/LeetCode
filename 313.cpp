@@ -7,14 +7,12 @@ public:
         for (int i = 1; i < n; ++i) 
         {
             dp[i] = INT_MAX;
-            for (int j = 0; j < primes.size(); ++j) 
-            {
+            for (int j = 0; j < primes.size(); ++j) {
                 dp[i] = min(dp[i], dp[idx[j]] * primes[j]);
             }
             for (int j = 0; j < primes.size(); ++j) 
             {
-                if (dp[i] == dp[idx[j]] * primes[j]) 
-                {
+                if (dp[i] == dp[idx[j]] * primes[j]) {
                     ++idx[j];
                 }
             }
