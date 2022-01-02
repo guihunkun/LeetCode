@@ -12,14 +12,12 @@ public:
     void push(int x) 
     {
         stack<int> s2;
-        while(! s.empty())
-        {
+        while(! s.empty()) {
             s2.push(s.top());
             s.pop();
         }
         s.push(x);
-        while(! s2.empty())
-        {
+        while(! s2.empty()) {
             s.push(s2.top());
             s2.pop();
         }
