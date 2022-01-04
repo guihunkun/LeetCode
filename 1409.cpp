@@ -27,9 +27,11 @@ struct BIT
     }
 };
 
-class Solution {
+class Solution 
+{
 public:
-    vector<int> processQueries(vector<int>& queries, int m) {
+    vector<int> processQueries(vector<int>& queries, int m) 
+    {
         int n = queries.size();
         BIT bit(m + n);
         
