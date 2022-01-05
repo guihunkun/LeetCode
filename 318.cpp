@@ -8,15 +8,13 @@ public:
         vector<int> bits(n, 0);
         for(int i = 0; i < n ; i++)
         {
-            for(int j = 0; j < words[i]. size(); j++)
-            {
+            for(int j = 0; j < words[i]. size(); j++) {
                 bits[i] |= (1 << (words[i][j] - 'a'));
             }
         }
         for(int i = 0; i < n; i++)
         {
-            for(int j = 0; j < n ; j++)
-            {
+            for(int j = 0; j < n ; j++) {
                 if(bits[i] & bits[j])
                     continue;
                 else
