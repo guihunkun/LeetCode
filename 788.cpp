@@ -52,8 +52,7 @@ public:
         int res = 0;
         for(int i = 1; i <= N; i++)
         {
-            if(isRoratedDigit(i))
-            {
+            if(isRoratedDigit(i)) {
                 res++;
             }
         }
