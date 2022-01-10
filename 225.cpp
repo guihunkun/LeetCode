@@ -39,8 +39,9 @@ public:
     /** Returns whether the stack is empty. */
     bool empty() 
     {
-        if(q.empty())
+        if(q.empty()) {
             return true;
+        }
         return false;
     }
 };
