@@ -15,8 +15,9 @@ public:
             nx = tx;
             ny = (ty % tx) + (sy / tx) * tx;
         }
-        if (nx == tx && ny == ty) 
+        if (nx == tx && ny == ty){ 
             return false;
+		}
         return reachingPoints(sx, sy, nx, ny);
     }
 };
