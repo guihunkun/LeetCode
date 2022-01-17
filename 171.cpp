@@ -9,8 +9,9 @@ public:
         long long res=0;
         if(s.size()==0)
             return res;
-        for(int i=0;i<s.size();i++)
+        for(int i=0;i<s.size();i++) {
             res=res*26+(int)(s[i]-'A'+1);
+	}
         return res;
     }
 };
