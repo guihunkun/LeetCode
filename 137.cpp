@@ -2,21 +2,23 @@
 #include<string>
 #include"vector"
 using namespace std;
-//ÓÉÓÚËùÓÐÊý¶¼ÊÇÕûÊý£¬ËùÒÔ×î´óÎ»ÊýÎª32Î»£¬¶ÔÓÚ³öÏÖÈý´ÎµÄÊý£¬Í³¼ÆÃ¿Ò»Î»ÉÏ1³öÏÖµÄ´ÎÊýÒ»¶¨ÄÜ±»3Õû³ý£¬¶ø²»ÄÜ±»ÈýÕû³ýµÄÎ»Ò»¶¨ÊÇµ¥¶À³öÏÖµÄÊýÔì³ÉµÄ£¬ËùÒÔÒÀ´ÎÍ³¼ÆÃ¿Ò»Î»µÄ´ÎÊý£¬²¢°Ñ²»ÄÜ±»3Õû³ýµÄÎ»ÊýÉèÎª1¸³¸ø½á¹û¡£
+//ç”±äºŽæ‰€æœ‰æ•°éƒ½æ˜¯æ•´æ•°ï¼Œæ‰€ä»¥æœ€å¤§ä½æ•°ä¸º32ä½ï¼Œå¯¹äºŽå‡ºçŽ°ä¸‰æ¬¡çš„æ•°ï¼Œç»Ÿè®¡æ¯ä¸€ä½ä¸Š1å‡ºçŽ°çš„æ¬¡æ•°ä¸€å®šèƒ½è¢«3æ•´é™¤ï¼Œè€Œä¸èƒ½è¢«ä¸‰æ•´é™¤çš„ä½ä¸€å®šæ˜¯å•ç‹¬å‡ºçŽ°çš„æ•°é€ æˆçš„ï¼Œæ‰€ä»¥ä¾æ¬¡ç»Ÿè®¡æ¯ä¸€ä½çš„æ¬¡æ•°ï¼Œå¹¶æŠŠä¸èƒ½è¢«3æ•´é™¤çš„ä½æ•°è®¾ä¸º1èµ‹ç»™ç»“æžœã€‚
     int singleNumber(vector<int>& nums) 
     {
         int length = nums.size();
         int result = 0;
-        for(int i = 0; i<32; i++){
+        for(int i = 0; i<32; i++)
+	{
             int count = 0; 
             int mask = 1 << i;
             cout<<mask<<endl;
-            for(int j=0; j<length; j++){
+            for(int j=0; j<length; j++)
+	    {
                 if(nums[j] & mask)
                     count++;
             }
           if(count %3)
-                result |= mask;  //°´Î»»òºó¸³Öµ¡£Èç£ºa|=bµÈ¼ÛÓÚa=a|b
+                result |= mask;  //æŒ‰ä½æˆ–åŽèµ‹å€¼ã€‚å¦‚ï¼ša|=bç­‰ä»·äºŽa=a|b
         }
         return result;
 
