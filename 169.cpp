@@ -34,7 +34,7 @@ public:
 
 class Solution 
 {
-public://Ëæ»úÌôÑ¡Ò»¸öÔªËØ£¬¼ì²éÊÇ·ñÊÇ¶àÊıÔªËØ¡£Ê±¼ä¸´ÔÓ¶È£ºAverage£ºO(n)¡£ÆÚÍû²éÕÒ´ÎÊı <2
+public://éšæœºæŒ‘é€‰ä¸€ä¸ªå…ƒç´ ï¼Œæ£€æŸ¥æ˜¯å¦æ˜¯å¤šæ•°å…ƒç´ ã€‚æ—¶é—´å¤æ‚åº¦ï¼šAverageï¼šO(n)ã€‚æœŸæœ›æŸ¥æ‰¾æ¬¡æ•° <2
     int majorityElement(vector<int>& nums) 
     {
         int count = 0;
@@ -71,3 +71,7 @@ int main()
 	cout<<ans<<endl;
 	return 0;	
 }
+
+
+
+
