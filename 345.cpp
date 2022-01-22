@@ -6,8 +6,9 @@ public:
         string  Vowels = "aeiouAEIOU";
         for(int i = 0; i < Vowels.size(); ++i)
         {
-            if(c == Vowels[i]) 
+            if(c == Vowels[i]) { 
                 return true;
+			}
         }
         return false;
     }
