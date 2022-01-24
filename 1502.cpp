@@ -7,8 +7,9 @@ public:
         int num = arr[1] - arr[0];
         for(int i = 2; i < arr.size(); i++)
         {
-            if(arr[i] - arr[i-1] != num)
+            if(arr[i] - arr[i-1] != num) {
                 return false;
+            }
         }
         return true;
     }
