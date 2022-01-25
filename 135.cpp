@@ -32,9 +32,7 @@ public:
             {
                 downIndex = 0;
                 candies+=1;
-            }
-            else
-            {
+            } else {
                 downIndex = 0;
                 candies=1;
             }
