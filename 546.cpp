@@ -7,8 +7,7 @@ public:
         int dp[100][100][100] = {0};
         for(int i = 0; i < len; i++) 
         {
-            for(int k = 0; k <= i; k++) 
-            {
+            for(int k = 0; k <= i; k++) {
                 dp[i][i][k] = (k + 1) * (k + 1);
             }
         }
