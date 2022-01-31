@@ -3,9 +3,11 @@ class Solution
 public:
     bool match(vector<int> & s1map, vector<int> &s2map)
     {
-        for(int i = 0; i < 26; i++)
-            if(s1map[i] != s2map[i])
+        for(int i = 0; i < 26; i++) {
+            if(s1map[i] != s2map[i]) {
                 return false;
+			}
+		}
         return true;
     }
     bool checkInclusion(string s1, string s2) 
