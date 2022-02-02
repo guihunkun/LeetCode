@@ -9,8 +9,7 @@ public:
         {
             mid = (l + r) / 2;
             vector<vector<bool>> vis(N, vector<bool>(N,false));
-            if(dfs(grid,0,0, mid, vis))
-            {
+            if(dfs(grid,0,0, mid, vis)) {
                 ans = mid;
                 r = mid-1;
             }
