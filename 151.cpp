@@ -1,7 +1,9 @@
 /*
-class Solution {
+class Solution 
+{
 public:
-    string reverseWords(string s) {
+    string reverseWords(string s) 
+    {
         stack<string> words = collectWords(s);
         string res = "";
         while (!words.empty()) {
