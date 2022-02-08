@@ -21,3 +21,5 @@ public:
         return rev.substr(0, n - f[n_new - 1]) + s;
     }
 };
+
+
