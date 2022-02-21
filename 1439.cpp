@@ -17,7 +17,3 @@ public:
         return ans.back();
     }
 };
-
-
-
-
