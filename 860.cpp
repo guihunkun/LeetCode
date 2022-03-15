@@ -10,8 +10,7 @@ public:
                 money[0]++;
             if(bills[i] == 10)
             {
-                if(money[0] > 0)
-                {
+                if(money[0] > 0) {
                     money[0]--;
                     money[1]++;
                 }  
