@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
 public:
     int calculate(string s) {
         stack<int> ops;
