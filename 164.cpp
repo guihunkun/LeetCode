@@ -4,7 +4,7 @@ class Solution
     {
         return x*y;
     }
-public://Õ∞≈≈–Ú
+public://√ç¬∞√Ö√Ö√ê√≤
     int maximumGap(vector<int>& nums) 
     {
         if(nums.size()<2)
@@ -57,3 +57,5 @@ public://Õ∞≈≈–Ú
         return ans;
     }
 };
+
+
