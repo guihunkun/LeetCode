@@ -1,7 +1,7 @@
 /*
-bpos��ʾ���ַ����Ƿ���Դӿ�ͷcut����ǰλ�á�
-bpos[i]==true�������ַ�����ͷ����i���ַ����������ں�����cut��
-���ַ���sǰ�����0���Ӷ�Ϊ��̬�滮���ó�ֵ��bpos[0]==true
+bpos表示从字符串是否可以从开头cut到当前位置。
+bpos[i]==true代表从字符串开头到第i个字符结束，存在合理的cut。
+在字符串s前面加上0，从而为动态规划设置初值即bpos[0]==true
 */
 class Solution 
 {
@@ -30,3 +30,5 @@ public:
         return dp[n];
     }
 };
+
+
