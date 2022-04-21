@@ -55,7 +55,3 @@ public:
         return result;
     }
 };
-
-
-
-
