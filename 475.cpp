@@ -11,13 +11,12 @@ public:
             int tempmin = INT_MAX;
             for(int j = startindex; j < heaters.size(); j++) 
             {
-                if(abs(heaters[j] - houses[i]) <= tempmin) 
-                {
+                if(abs(heaters[j] - houses[i]) <= tempmin) {
                     tempmin = abs(heaters[j] - houses[i]);
                     startindex = j;
-                } 
-                else 
+                } else {
                     break;
+                }
             }
             maxn = max(maxn, tempmin);
         }
