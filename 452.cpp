@@ -12,8 +12,7 @@ public:
         int i = -1, ans = 0, j = 0, size = points.size();
         while(i < size && j < size) 
         {
-            if(i < 0 || points[j][0] > points[i][1] )
-            {
+            if(i < 0 || points[j][0] > points[i][1] ) {
                 i = j;
                 ++ans;
             }
