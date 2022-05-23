@@ -38,5 +38,3 @@ public:
         return vs.size();
     }
 };
-
-
