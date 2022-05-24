@@ -32,5 +32,3 @@ public:
         return res;
     }
 };
-
-
