@@ -52,5 +52,3 @@ public:
 		return res;
     }
 };
-
-
