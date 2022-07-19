@@ -27,4 +27,3 @@ public:
         return *max_element(sell[n - 1].begin(), sell[n - 1].end());
     }
 };
-
