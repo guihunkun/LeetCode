@@ -19,3 +19,4 @@ public:
         return upper_bound(chalk.begin(), chalk.end(), k) - chalk.begin();
     }
 };
+
