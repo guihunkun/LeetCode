@@ -16,5 +16,3 @@ public:
         return res;
     }
 };
-
-
