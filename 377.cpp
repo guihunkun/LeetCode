@@ -18,7 +18,7 @@ public:
 };
 */
 /*
-dp[i]±íÊ¾Ä¿±êÊýÎªiµÄ½âµÄ¸öÊý£¬È»ºóÎÒÃÇ´Ó1±éÀúµ½target£¬¶ÔÓÚÃ¿Ò»¸öÊýi£¬±éÀúnumsÊý×é£¬Èç¹ûi>=x, dp[i] += dp[i - x]¡£Õâ¸öÒ²ºÜºÃÀí½â£¬±ÈÈçËµ¶ÔÓÚ[1,2,3] 4£¬Õâ¸öÀý×Ó£¬µ±ÎÒÃÇÔÚ¼ÆËãdp[3]µÄÊ±ºò£¬3¿ÉÒÔ²ð·ÖÎª1+x£¬¶øx¼´Îªdp[2]£¬3Ò²¿ÉÒÔ²ð·ÖÎª2+x£¬´ËÊ±xÎªdp[1]£¬3Í¬Ñù¿ÉÒÔ²ðÎª3+x£¬´ËÊ±xÎªdp[0]£¬ÎÒÃÇ°ÑËùÓÐµÄÇé¿ö¼ÓÆðÀ´¾ÍÊÇ×é³É3µÄËùÓÐÇé¿öÁË£¬
+dp[i]è¡¨ç¤ºç›®æ ‡æ•°ä¸ºiçš„è§£çš„ä¸ªæ•°ï¼Œç„¶åŽæˆ‘ä»¬ä»Ž1éåŽ†åˆ°targetï¼Œå¯¹äºŽæ¯ä¸€ä¸ªæ•°iï¼ŒéåŽ†numsæ•°ç»„ï¼Œå¦‚æžœi>=x, dp[i] += dp[i - x]ã€‚è¿™ä¸ªä¹Ÿå¾ˆå¥½ç†è§£ï¼Œæ¯”å¦‚è¯´å¯¹äºŽ[1,2,3] 4ï¼Œè¿™ä¸ªä¾‹å­ï¼Œå½“æˆ‘ä»¬åœ¨è®¡ç®—dp[3]çš„æ—¶å€™ï¼Œ3å¯ä»¥æ‹†åˆ†ä¸º1+xï¼Œè€Œxå³ä¸ºdp[2]ï¼Œ3ä¹Ÿå¯ä»¥æ‹†åˆ†ä¸º2+xï¼Œæ­¤æ—¶xä¸ºdp[1]ï¼Œ3åŒæ ·å¯ä»¥æ‹†ä¸º3+xï¼Œæ­¤æ—¶xä¸ºdp[0]ï¼Œæˆ‘ä»¬æŠŠæ‰€æœ‰çš„æƒ…å†µåŠ èµ·æ¥å°±æ˜¯ç»„æˆ3çš„æ‰€æœ‰æƒ…å†µäº†ï¼Œ
 */
 /*
 class Solution {
@@ -38,7 +38,7 @@ public:
 };
 */
 /*
-Èç¹ûtargetÔ¶´óÓÚnumsÊý×éµÄ¸öÊýµÄ»°£¬ÉÏÃæµÄËã·¨¿ÉÒÔ×öÊÊµ±µÄÓÅ»¯£¬ÏÈ¸ønumsÊý×éÅÅ¸öÐò£¬È»ºó´Ó1±éÀúµ½target£¬¶ÔÓÚiÐ¡ÓÚÊý×éÖÐµÄÊý×ÖxÊ±£¬ÎÒÃÇÖ±½Óbreakµô£¬ÒòÎªºóÃæµÄÊý¸ü´ó£¬ÆäÓàµØ·½²»±ä.
+å¦‚æžœtargetè¿œå¤§äºŽnumsæ•°ç»„çš„ä¸ªæ•°çš„è¯ï¼Œä¸Šé¢çš„ç®—æ³•å¯ä»¥åšé€‚å½“çš„ä¼˜åŒ–ï¼Œå…ˆç»™numsæ•°ç»„æŽ’ä¸ªåºï¼Œç„¶åŽä»Ž1éåŽ†åˆ°targetï¼Œå¯¹äºŽiå°äºŽæ•°ç»„ä¸­çš„æ•°å­—xæ—¶ï¼Œæˆ‘ä»¬ç›´æŽ¥breakæŽ‰ï¼Œå› ä¸ºåŽé¢çš„æ•°æ›´å¤§ï¼Œå…¶ä½™åœ°æ–¹ä¸å˜.
 */
 class Solution {
 public:
@@ -55,3 +55,5 @@ public:
         return dp[target];
     }
 };
+
+
