@@ -30,5 +30,3 @@ int main()
 	cout<<bo<<endl;
 	return 0;
 }
-
-
