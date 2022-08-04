@@ -59,4 +59,3 @@ public:
         return -1;
     }
 };
-
