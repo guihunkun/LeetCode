@@ -1,11 +1,11 @@
 //leetcode
-// ²¢²é¼¯Ä£°å
+// å¹¶æŸ¥é›†æ¨¡æ¿
 class UnionFind {
 public:
     vector<int> parent;
     vector<int> size;
     int n;
-    // µ±Ç°Á¬Í¨·ÖÁ¿ÊıÄ¿
+    // å½“å‰è¿é€šåˆ†é‡æ•°ç›®
     int setCount;
     
 public:
@@ -50,7 +50,7 @@ public:
             return u[2] < v[2];
         });
 
-        // ¼ÆËã value
+        // è®¡ç®— value
         UnionFind uf_std(n);
         int value = 0;
         for (int i = 0; i < m; ++i) {
@@ -62,7 +62,7 @@ public:
         vector<vector<int>> ans(2);
         
         for (int i = 0; i < m; ++i) {
-            // ÅĞ¶ÏÊÇ·ñÊÇ¹Ø¼ü±ß
+            // åˆ¤æ–­æ˜¯å¦æ˜¯å…³é”®è¾¹
             UnionFind uf(n);
             int v = 0;
             for (int j = 0; j < m; ++j) {
@@ -75,7 +75,7 @@ public:
                 continue;
             }
 
-            // ÅĞ¶ÏÊÇ·ñÊÇÎ±¹Ø¼ü±ß
+            // åˆ¤æ–­æ˜¯å¦æ˜¯ä¼ªå…³é”®è¾¹
             uf = UnionFind(n);
             uf.unite(edges[i][0], edges[i][1]);
             v = edges[i][2];
@@ -92,4 +92,3 @@ public:
         return ans;
     }
 };
-
