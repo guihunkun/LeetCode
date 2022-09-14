@@ -18,3 +18,5 @@ int main()
 	res=hammingWeight(n);
 	cout<<res<<endl;
 }
+
+
