@@ -14,3 +14,4 @@ public:
         return times.size() == occur.size();
     }
 };
+
