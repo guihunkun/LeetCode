@@ -32,3 +32,4 @@ public:
         return (maxNum-1)*(secNum-1);
     }
 };
+
