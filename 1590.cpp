@@ -26,3 +26,4 @@ public:
         return res == nums.size() ? -1 : res;
     }
 };
+
