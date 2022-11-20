@@ -67,3 +67,5 @@ int main()
 		cout<<gh[i]<<" ";
 	return 0; 
 }
+
+
