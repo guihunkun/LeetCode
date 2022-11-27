@@ -7,8 +7,9 @@ public:
         res[0] = first;
         for(int i = 0; i < encoded.size(); i++)
         {
-            res[i+1] = res[i] ^ encoded[i]; //Èôa^b=c,Ôòa=b^c
+            res[i+1] = res[i] ^ encoded[i]; //ÃˆÃ´a^b=c,Ã”Ã²a=b^c
         }
         return res;
     }
 };
+
