@@ -20,6 +20,3 @@ public:
         return k - (arr[l - 1] - (l - 1) - 1) + arr[l - 1];
     }
 };
-
-
-
