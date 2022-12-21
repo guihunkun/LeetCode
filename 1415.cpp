@@ -32,3 +32,4 @@ public:
 		return tmp[tmp.size() - 1] != a;
 	}
 };
+
