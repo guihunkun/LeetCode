@@ -14,6 +14,3 @@ public:
         return res;
     }
 };
-
-
-
