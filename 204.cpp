@@ -40,3 +40,4 @@ int main()
 	res=countPrimes(n);
 	cout<<res<<endl;
 }
+
