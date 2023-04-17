@@ -25,5 +25,3 @@ public:
         return concatenation1 > concatenation2;
     }
 };
-
-
