@@ -20,4 +20,3 @@ public:
         return recLen == 0;
     }
 };
-
