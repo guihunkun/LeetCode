@@ -11,3 +11,4 @@ public:
         return temp - N - 1;  
     }
 };
+
