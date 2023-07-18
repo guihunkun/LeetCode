@@ -16,3 +16,5 @@ public:
         return s.substr(0, happy);
     }
 };
+
+
