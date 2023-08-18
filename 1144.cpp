@@ -21,3 +21,4 @@ public:
         return min(s1, s2);
     }
 };
+
