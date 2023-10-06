@@ -22,5 +22,3 @@ public:
         return res;
     }
 };
-
-
